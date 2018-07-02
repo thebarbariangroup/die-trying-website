@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Static Front-end</title>
+  <link rel="stylesheet" href="/assets/styles/main.css">
+</head>
+<body>
+  <div class="page-container {{classes}}">
+    {{> 'global/nav/head-nav'}}
+    <main class="content-container">
+      {{#block 'body'}}{{/block}}
+    </main>
+    {{> 'global/footer/footer' }}
+  </div>
+  <script src="/assets/scripts/index.js"></script>
+</body>
+</html>
