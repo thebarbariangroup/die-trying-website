@@ -1,0 +1,34 @@
+{
+  "_templateId": "landing/index",
+  "intro": {},
+  "hero": {
+    "header": {
+      "logo": {
+        "src": "",
+        "alt": "Die Trying Collective logo"
+      },
+      "appanage": {
+        "figure": {
+          "src": "",
+          "alt": "Barbarian logo"
+        },
+        "eyebrow": "Powered By"
+      }
+    },
+    "title": "Die Trying Collective",
+    "subtitle": "Turning sustainability setbacks into real-time solutions"
+  },
+  "body": {
+    "components": [
+      {
+        "_componentId": "rhetorical",
+        "query": [
+          "We’ve become wasteful.", 
+          "We’ve become lazy.",
+          "We’ve become unaware.",
+          "We take plastic forks because we don’t know why we wouldn’t. We buy plastic water bottles because well, doesn’t everyone?"],
+        "response": "Wrong"
+      }
+    ]
+  }
+}
