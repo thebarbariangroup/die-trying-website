@@ -7,25 +7,25 @@
     margin-top: rem(-32);
     padding: 0 $col-gutter rem(80);
 
-    @include media-min(sm) {
+    @include media-clamp(xs, md) {
+      margin-top: -6vw;
+    }
+
+    @include media-min(md) {
       margin-top: rem(-64);
     }
   }
 
   &_exclamation {
-    position: absolute;
-    left: rem(-24);
-    right: rem(-24);
-    bottom: rem(28);
-    // font-size: rem(106);
-    font-size: 27vw;
+    margin: -10vw -10vw rem(-48);
+    font-size: 28vw;
     font-weight: $bold;
     text-transform: uppercase;
     color: $red;
     z-index: 1; // stack below .sermon
 
-    @include media-min(sm) {
-      // font-size: rem(385);
+    @include media-min(lg) {
+      margin-top: rem(-160);
     }
   }
 }

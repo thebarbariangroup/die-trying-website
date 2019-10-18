@@ -9,9 +9,13 @@
     line-height: 1;
     color: transparent;
 
-    @include media-min(sm) {
-      font-size: rem(106);
+    @include media-min(xs) {
       -webkit-text-stroke-width: 1px;
+      font-size: 8vw;
+    }
+
+    @include media-min(md) {
+      font-size: rem(106);
     }
   }
 }
