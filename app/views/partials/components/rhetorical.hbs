@@ -1,6 +1,10 @@
 <section class="dtc-rhetorical">
   <div class="dtc-rhetorical_content">
-    {{> components/paragraphs paragraphs=query }}
+    {{#extend 'components/sermon'}}
+      {{#content 'soapbox'}}
+        {{> components/paragraphs paragraphs=query }}
+      {{/content}}
+    {{/extend}}
     <div class="dtc-rhetorical_exclamation">
       {{ response }}
     </div>

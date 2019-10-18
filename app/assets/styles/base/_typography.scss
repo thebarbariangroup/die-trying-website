@@ -1,0 +1,15 @@
+.#{$ns}{
+  &-title {
+    margin-bottom: rem(32);
+    font-family: $font-primary;
+
+    @include media-min(sm) {
+      margin-bottom: rem(54);
+    }
+  }
+
+  &-subtitle {
+    font-family: $font-secondary;
+    line-height: rem(24);
+  }
+}

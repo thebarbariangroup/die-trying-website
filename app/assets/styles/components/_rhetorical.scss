@@ -1,0 +1,31 @@
+.#{$ns}-rhetorical {
+  position: relative;
+  padding-top: rem(16);
+  background: linear-gradient(to bottom, $blue, $black 40% 50%, $blue 50%);
+
+  &_content {
+    margin-top: rem(-32);
+    padding: 0 $col-gutter rem(80);
+
+    @include media-min(sm) {
+      margin-top: rem(-64);
+    }
+  }
+
+  &_exclamation {
+    position: absolute;
+    left: rem(-24);
+    right: rem(-24);
+    bottom: rem(28);
+    // font-size: rem(106);
+    font-size: 27vw;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $red;
+    z-index: 1; // stack below .sermon
+
+    @include media-min(sm) {
+      // font-size: rem(385);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.#{$ns}-sermon {
+  position: relative; // necessary for proper z-indexing
+  text-align: center;
+  z-index: 2;
+
+  .#{$ns}-paragraph {
+    -webkit-text-stroke: 0.5px $offwhite; // not sure how sub-px is working
+    font-size: rem(32);
+    line-height: 1;
+    color: transparent;
+
+    @include media-min(sm) {
+      font-size: rem(106);
+      -webkit-text-stroke-width: 1px;
+    }
+  }
+}

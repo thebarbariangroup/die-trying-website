@@ -7,7 +7,7 @@ requireDir('../tasks', { recurse: true });
 
 gulp.task('watch', () => {
   gulp.watch(`${config.publish.base}/**/*`, () => gulp.start('publish'));
-  gulp.watch(`${config.styles.base}/**/*.less`, () => gulp.start('styles'));
+  gulp.watch(`${config.styles.base}/**/*.scss`, () => gulp.start('styles'));
   gulp.watch(`${config.scripts.base}/**/*.js`, () => gulp.start('scripts'));
   gulp.watch(`${config.images.base}/**/*`, () => gulp.start('images'));
 });

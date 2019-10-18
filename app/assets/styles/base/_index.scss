@@ -1,0 +1,7 @@
+html {
+  background-color: $black; // better overscroll
+}
+
+body {
+  overflow-x: hidden; // prevent side scroll from oversized elements
+}
