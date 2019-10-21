@@ -26,5 +26,22 @@
       "We take plastic forks because we don’t know why we wouldn’t.",
       "We buy plastic water bottles because well, doesn’t everyone?"],
     "response": "Wrong"
+  },
+  "introduction": {
+    "header": "We are the Die Trying Collective, a digital ecosystem that is changing our community's sustainability habits.",
+    "first": [
+      "We inform you of innovative, simple solutions that can benefit our planet.",
+      "Through our first project, “SUD,” our website, social, and automated bot, we feed you sustainable facts and daily updates."
+    ],
+    "subject": "Who we are",
+    "second": [
+      "With awareness and conscious action, we’ll show you the impact made as we execute sustainability, together as a collective.",
+      "Our end goal? To see no end. We’ll go on, and on, and on, and on.",
+      "Let’s do this or die trying."
+    ]
+  },
+  "statistic": {
+    "title": "Today's Stat",
+    "subtitle": "Damn right we saved"
   }
 }
