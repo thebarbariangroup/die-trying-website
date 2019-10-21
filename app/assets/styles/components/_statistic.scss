@@ -1,0 +1,66 @@
+.#{$ns}-statistic {
+  background: linear-gradient(to bottom, $red, $green);
+  
+
+  &_content {
+    padding: rem(32) $col-gutter;
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: rem(24);
+
+    @include media-min(md) {
+      padding-bottom: rem(96);
+      
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  &_header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  &_body {
+    flex: 3
+  }
+  
+  &_stat {
+    margin-top: rem(-128);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &_figure {
+    @include outline-text($blue, 1);
+    font-size: rem(224);
+    letter-spacing: -20px;
+
+    @include media-min(md) {
+      font-size: rem(620);
+      line-height: 0.8;
+    }
+  }
+
+  &_description {
+    margin-top: rem(32);
+  }
+  
+  .#{$ns}-title {
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: $font-secondary;
+
+    @include media-min(md) {
+      margin-top: rem(96);
+    }
+  }
+
+  .#{$ns}-subtitle {
+    margin-bottom: rem(32);
+  }
+}

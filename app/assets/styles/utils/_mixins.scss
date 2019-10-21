@@ -1,6 +1,7 @@
 @mixin outline-text($color: $offwhite, $width: 1) {
   -webkit-text-stroke-width: #{$width}px;
   -webkit-text-stroke-color: $color;
+  font-family: $font-primary;
   font-weight: $bold;
   line-height: 1;
   color: transparent;
