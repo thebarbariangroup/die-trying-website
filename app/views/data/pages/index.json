@@ -47,5 +47,14 @@
   "reason": {
     "subject": "Why we're doing it",
     "main": "Make the world think again"
+  },
+  "conclusion": {
+    "media": {
+      "src": "",
+      "alt": ""
+    },
+    "main": [
+      "Enough is enough. It’s time to take a stand, show the difference, and make a change for our community. By displaying our in-office stats and tracking the impact, we’re making steps towards a better tomorrow—a stronger, healthier Mother. We can’t retract the damage done, but we can stop ourselves from furthering it."
+    ]
   }
 }
