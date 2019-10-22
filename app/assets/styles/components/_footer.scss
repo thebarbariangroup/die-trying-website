@@ -1,0 +1,25 @@
+.#{$ns}-footer {
+  background: $black;
+
+  &_content {
+    padding: rem(16) $col-gutter;
+    text-align: center;
+  }
+
+  &_header {
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: 1.3125;
+  }
+
+  &_body {
+    margin: rem(54) auto;
+  }
+
+  .#{$ns}-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

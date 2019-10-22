@@ -56,5 +56,18 @@
     "main": [
       "Enough is enough. It’s time to take a stand, show the difference, and make a change for our community. By displaying our in-office stats and tracking the impact, we’re making steps towards a better tomorrow—a stronger, healthier Mother. We can’t retract the damage done, but we can stop ourselves from furthering it."
     ]
+  },
+  "footer": {
+    "copy": "Die Trying Collective needs your help to live sustainably inside our walls and out.",
+    "ctas": {
+      "donate": {
+        "text": "Donate",
+        "link": "#"
+      },
+      "follow": {
+        "text": "Follow us",
+        "link": "#"
+      }
+    }
   }
 }

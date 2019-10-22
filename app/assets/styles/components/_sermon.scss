@@ -6,6 +6,7 @@
   .#{$ns}-paragraph {
     -webkit-text-stroke: 0.5px $offwhite; // not sure how sub-px is working
     font-size: rem(32);
+    font-weight: $bold;
     line-height: 1.3125;
     color: transparent;
 

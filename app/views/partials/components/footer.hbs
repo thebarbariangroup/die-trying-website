@@ -1,0 +1,17 @@
+<div class="dtc-footer">
+  <div class="dtc-footer_content">
+    <div class="dtc-footer_header">
+      <p class="dtc-paragraph">
+        {{ copy }}
+      </p>
+    </div>
+    <div class="dtc-footer_body">
+      {{#with ctas}}
+      <div class="dtc-ctas">
+        {{> global/ctas/donate donate }}
+        {{> global/ctas/link follow }}
+      </div>
+      {{/with}}
+    </div>
+  </div>
+</div>
