@@ -43,5 +43,9 @@
   "statistic": {
     "title": "Today's Stat",
     "subtitle": "Damn right we saved"
+  },
+  "reason": {
+    "subject": "Why we're doing it",
+    "main": "Make the world think again"
   }
 }

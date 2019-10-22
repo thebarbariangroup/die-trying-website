@@ -1,0 +1,44 @@
+.#{$ns}-reason {
+  background: $red;
+
+  &_content {
+    position: relative;
+    padding: rem(56) $col-gutter;
+
+    @include media-min(md) {
+      padding-top: rem(128);
+      padding-bottom: rem(128);
+    }
+  }
+
+  &_subject {
+    position: absolute;
+    top: rem(64);
+    left: rem(16);
+    @include outline-text($blue);
+    font-size: rem(28);
+    line-height: 1;
+
+    transform: rotate(-10deg);
+    transform-origin: center;
+
+    @include media-min(md) {
+      left: rem(32);
+      font-size: rem(80);
+    }
+  }
+
+  &_reason {
+    margin: 0 auto;
+    
+    max-width: rem(1440);
+    text-align: center;
+    font-size: rem(48);
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    @include media-min(md) {
+      font-size: rem(128);
+    }
+  }
+}
