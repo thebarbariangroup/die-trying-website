@@ -9,6 +9,7 @@ body {
 }
 
 .#{$ns}-cta {
+  margin-top: rem(80);
   color: $offwhite;
   text-decoration: none;
   
@@ -17,29 +18,52 @@ body {
     cursor: pointer;
   }
 
+  @include media-min(md) {
+    margin-top: rem(128);
+  }
+
+  &_text {
+    position: relative;
+    z-index: 10;
+  }
+
   &--link {
     font-size: rem(24);
+    font-weight: $bold;
     font-style: italic;
     text-decoration: underline;
+
+    @include media-min(md) {
+      font-size: rem(32);
+    }
   }
 
   &--donate {
     position: relative;
     padding: rem(16);
     font-size: rem(48);
+    font-weight: $bold;
     text-transform: uppercase;
-    z-index: 2;
+
+    @include media-min(md) {
+      font-size: rem(120);
+    }
     
-    &::before {
+    &::after {
+      $diameter: 60; // **LOCAL VAR
+      
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      // padding: 100%;
-      border: 3px solid $red;
+      margin-right: -50%;
+      top: 50%;
+      left: 50%;
+      width: #{$diameter + "%"};
+      padding-top: #{$diameter + "%"};
+      border: 7px solid $red;
       border-radius: 50%;
       background-color: $blue;
       z-index: 1;
+      transform: translate(-50%, -50%);
     }
   }
 }

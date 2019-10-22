@@ -10,6 +10,10 @@
     font-size: rem(32);
     font-weight: $bold;
     line-height: 1.3125;
+
+    @include media-min(md) {
+      font-size: rem(106);
+    }
   }
 
   &_body {
