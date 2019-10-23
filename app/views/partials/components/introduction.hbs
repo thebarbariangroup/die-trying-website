@@ -1,0 +1,22 @@
+<div class="dtc-introduction">
+  <div class="dtc-introduction_content">
+    <div class="dtc-introduction_header">
+      <div class="dtc-title">
+        {{ header }}
+      </div>
+    </div>
+    <div class="dtc-introduction_body">
+      <div class="dtc-introduction_col dtc-col--tilt">
+        {{> components/paragraphs paragraphs=first }}
+      </div>
+      <div class="dtc-introduction_subject dtc-col--tilt">
+        <span class="dtc-introduction_subject_content">
+          {{ subject }}
+        </span>
+      </div>
+      <div class="dtc-introduction_col dtc-col--tilt">
+        {{> components/paragraphs paragraphs=second }}
+      </div>
+    </div>
+  </div>
+</div>

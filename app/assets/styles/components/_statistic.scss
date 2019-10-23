@@ -1,0 +1,71 @@
+.#{$ns}-statistic {
+  background: linear-gradient(to bottom, $red, $green);
+  
+
+  &_content {
+    margin: 0 auto;
+    max-width: rem(1440);
+    padding: rem(32) $col-gutter;
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: rem(24);
+
+    @include media-min(md) {
+      padding-bottom: rem(96);
+      
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
+  &_header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  &_body {
+    flex: 3
+  }
+  
+  &_stat {
+    display: flex;
+    flex-direction: column;
+    
+    @include media-min(md) {
+      margin-top: rem(-128);
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: center;
+    }
+  }
+
+  &_figure {
+    @include outline-text($blue, 2);
+    font-size: rem(224);
+    letter-spacing: -16px;
+
+    @include media-min(md) {
+      font-size: rem(620);
+      line-height: 0.8;
+    }
+  }
+  
+  .#{$ns}-title {
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: $font-secondary;
+
+    @include media-min(md) {
+      margin-top: rem(96);
+    }
+  }
+
+  .#{$ns}-subtitle {
+    
+    @include media-min(md) {
+      margin-bottom: rem(32);
+    }
+  }
+}

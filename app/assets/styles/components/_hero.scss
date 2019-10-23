@@ -1,0 +1,48 @@
+.#{$ns}-hero {
+  display: flex;
+  flex-flow: column wrap;
+
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  color: $offwhite;
+  text-transform: uppercase;
+
+  &_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: rem(1440);
+    
+    padding: rem(28) $col-gutter;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &_content {
+    margin: auto;
+    text-align: center;
+    max-width: rem(1120);
+    padding: 0 $col-gutter;
+  }
+
+  .#{$ns}-appanage {
+    text-align: right;
+  }
+
+  .#{$ns}-title {
+    font-size: rem(48);
+
+    @include media-clamp(sm, md) {
+      font-size: 15vw;
+    }
+
+    @include media-min(md) {
+      font-size: rem(160);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{{!-- REVIEW: potentially delete this --}}
+<section class="dtc-body">
+  <div class="dtc-body_content">
+    {{#each components}}
+      {{> (concat 'components/'(lookup . '_componentId'))}}
+    {{/each}}
+  </div>
+</section>
