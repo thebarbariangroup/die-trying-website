@@ -3,6 +3,8 @@
   
 
   &_content {
+    margin: 0 auto;
+    max-width: rem(1440);
     padding: rem(32) $col-gutter;
     text-align: center;
     font-family: $font-secondary;

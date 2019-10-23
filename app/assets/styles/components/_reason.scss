@@ -3,9 +3,11 @@
 
   &_content {
     position: relative;
+    margin: 0 auto;
+    max-width: rem(1440);
     padding: rem(56) $col-gutter;
 
-    @include media-min(md) {
+    @include media-min(sm) {
       padding-top: rem(128);
       padding-bottom: rem(128);
     }
@@ -22,7 +24,7 @@
     transform: rotate(-10deg);
     transform-origin: center;
 
-    @include media-min(md) {
+    @include media-min(sm) {
       left: rem(32);
       font-size: rem(80);
     }
@@ -37,7 +39,7 @@
     line-height: 1.1;
     text-transform: uppercase;
 
-    @include media-min(md) {
+    @include media-min(sm) {
       font-size: rem(128);
     }
   }

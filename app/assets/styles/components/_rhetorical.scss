@@ -4,16 +4,16 @@
   background: linear-gradient(to bottom, $blue, $black 40% 50%, $blue 50%);
 
   &_content {
-    margin-top: rem(-32);
+    margin-top: rem(-40);
     padding: 0 $col-gutter rem(80);
     font-weight: 700;
 
     @include media-clamp(xs, md) {
-      margin-top: -6vw;
+      margin-top: -8vw;
     }
 
     @include media-min(md) {
-      margin-top: rem(-64);
+      margin-top: rem(-96);
     }
   }
 

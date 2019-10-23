@@ -10,15 +10,17 @@
   text-transform: uppercase;
 
   &_header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    padding: rem(28) rem(20);
+    margin: auto;
+    max-width: rem(1440);
+    
+    padding: rem(28) $col-gutter;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 
   &_content {
