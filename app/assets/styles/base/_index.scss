@@ -8,6 +8,12 @@ body {
   color: $offwhite;
 }
 
+.#{$ns}-paragraph {
+  margin: 1em auto; // relative to the size of the (local) font
+  font-family: $font-secondary;
+  line-height: 1.4;
+}
+
 .#{$ns}-cta {
   margin-top: rem(80);
   color: $offwhite;
