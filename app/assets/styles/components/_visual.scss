@@ -1,3 +1,73 @@
 .#{$ns}-visual {
+  $CLASS: &; // LOCAL VAR
+
   background: linear-gradient(to bottom, $black, $red);
+
+  &_content {
+    margin: 0 auto;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  &_header {
+    margin: rem(64) auto rem(32);
+    padding: 0 $col-gutter;
+  }
+
+  &_headline {
+    font-family: $font-primary;
+    font-weight: $bold;
+    font-style: italic;
+    
+    @include media-min(sm) {
+      margin: 0 auto;
+      max-width: rem(576);
+      font-size: rem(32);
+    }
+  }
+
+  &_body {
+    position: relative;
+    flex: 1;
+
+    // &:hover {
+    //   #{$CLASS}_figure {
+    //     &--trashpile, &--nyc {
+    //       transform: scale(1);
+    //     }
+    //   }
+    // }
+  }
+
+  .#{$ns}-traveller_content {
+    height: 100%;
+  }
+
+  // TODO: consider pulling this out into base/global
+  &_figure {
+    display: flex;
+    justify-content: center;
+    
+    &--nyc {
+      position: absolute;
+      bottom: 0;
+      width: 5%;
+
+      transform: scale(5.5);
+      transform-origin: center bottom;
+    }
+
+    &--trashpile {
+      position: absolute;
+      top: 0;
+      bottom: -50%;
+      width: 100%;
+
+      transform: scale(0.1);
+      transform-origin: center 67%;
+    }
+  }
 }

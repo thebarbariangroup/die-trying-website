@@ -6,7 +6,7 @@
   line-height: 1;
   color: transparent;
 
-  @include media-min(md) {
+  @include media-min(sm) {
     -webkit-text-stroke-width: #{$width + 1}px;
   }
 }
