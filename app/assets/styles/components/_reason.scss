@@ -15,7 +15,7 @@
 
   &_subject {
     position: absolute;
-    top: 48px;
+    top: rem(48);
     left: rem(16);
     @include outline-text($blue);
     font-size: rem(28);
@@ -25,6 +25,7 @@
     transform-origin: center;
 
     @include media-min(sm) {
+      top: rem(80);
       left: rem(32);
       font-size: rem(80);
     }

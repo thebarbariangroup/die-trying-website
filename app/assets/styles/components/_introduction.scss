@@ -29,6 +29,7 @@
 
   &_body {
     margin: rem(96) auto;
+    max-width: rem(480);
 
     @include media-min(md) {
       display: flex;

@@ -44,6 +44,7 @@
   &_figure {
     @include outline-text($blue, 2);
     font-size: rem(224);
+    font-weight: $regular;
     letter-spacing: -16px;
 
     @include media-min(md) {

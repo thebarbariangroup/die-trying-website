@@ -1,0 +1,94 @@
+.#{$ns}-device {
+  background: $green;
+
+  &_content {
+    margin: 0 auto;
+    max-width: rem(1440);
+    padding: rem(16) 0 rem(64);
+
+    @include media-min(sm) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  &_col {
+    flex: 1;
+  }
+
+  &_frame {
+    position: relative;
+  }
+
+  &_figure {
+    & > svg {
+      width: 100%;
+    }
+    
+    &--screen-1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20%;
+      transform: translate(-86%, -10%);
+    }
+  }
+
+  &_copy {
+    position: relative;
+    display: flex;
+
+    &-header {
+      position: absolute;
+      margin-left: rem(-16);
+      top: rem(-48);
+      width: 100%;
+      z-index: 1;
+
+      @include media-min(sm) {
+        margin: 0 auto;
+        top: 0;
+        text-align: center;
+      }
+    }
+
+    &-body {
+      margin: auto;
+      padding: 0 $col-gutter;
+      z-index: 2;
+
+      @include media-min(sm) {
+        width: 65%;
+      }
+    }
+
+    &-block {
+      font-size: rem(16);
+      line-height: 1.3125;
+      text-align: justify;
+
+      @include media-min(sm) {
+        font-size: rem(24);
+      }
+
+      &--0 {}
+
+      &--1 {
+        // TODO: probably remove this
+        @include media-min(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_subject {
+    @include outline-text($blue, 2);
+    font-size: rem(205);
+
+    @include media-min(sm) {
+      font-size: rem(320);
+    }
+  }
+}

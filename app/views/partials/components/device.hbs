@@ -1,0 +1,40 @@
+<section class="dtc-device">
+  {{#> components/slider }}
+    <div class="dtc-device_content">
+      <div class="dtc-device_frame dtc-device_col">
+        {{!-- fork --}}
+        {{!-- knife --}}
+        <figure class="dtc-device_figure dtc-device_figure--knife">
+          {{!-- {{> global/icons/knife }} --}}
+        </figure>
+        {{!-- spoon --}}
+        <figure class="dtc-device_figure dtc-device_figure--spoon">
+          {{!-- {{> global/icons/spoon }} --}}
+        </figure>
+        {{!-- mask --}}
+        {{!-- screen 1 --}}
+        <figure class="dtc-device_figure dtc-device_figure--screen-1">
+          {{> global/icons/device-screen_2 }}
+        </figure>
+        {{!-- screen 2 --}}
+        <figure class="dtc-device_figure">
+          {{> global/icons/device }}
+        </figure>
+      </div>
+      <div class="dtc-device_copy dtc-device_col">
+        <div class="dtc-device_copy-header">
+          <div class="dtc-device_subject">
+            {{ subject }}
+          </div>
+        </div>
+        <div class="dtc-device_copy-body">
+          {{#each copy}}
+            <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}">
+              {{> components/paragraphs paragraphs=this }}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{/components/slider}}
+</section>

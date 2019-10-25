@@ -6,7 +6,10 @@
   z-index: 2;
 
   .#{$ns}-paragraph {
+    margin-top: 0;
+    margin-bottom: 0;
     -webkit-text-stroke: 0.5px $offwhite; // not sure how sub-px is working
+    font-family: $font-primary;
     font-size: rem(32);
     font-weight: $bold;
     line-height: 1.3125;

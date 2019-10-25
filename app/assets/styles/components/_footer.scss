@@ -16,6 +16,10 @@
     @include media-min(md) {
       font-size: rem(106);
     }
+
+    .#{$ns}-paragraph {
+      font-family: $font-primary;
+    }
   }
 
   &_body {
