@@ -73,3 +73,8 @@ body {
     }
   }
 }
+
+.#{$ns}-hidden {
+  visibility: hidden;
+  z-index: -1;
+}

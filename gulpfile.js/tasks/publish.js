@@ -12,7 +12,6 @@ gulp.task('publish', () => {
     .src(config.publish.pages)
     .pipe(plumber())
     .pipe(data((file) => {
-      console.log('FILE: ', file.path)
       return requireUncached(file.path.replace('pages', 'data/pages').replace('.hbs', '.json'));
     }))
     .pipe(hb()

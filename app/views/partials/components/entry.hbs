@@ -1,0 +1,15 @@
+<section class="dtc-entry">
+  {{#> components/slider }}
+    <div class="dtc-entry_content">
+      <div class="dtc-entry_fact dtc-entry_fact--initial">
+        {{ initial }}
+      </div>
+      {{#each facts}}
+      <div class="dtc-entry_fact dtc-entry_fact--{{ @index }} dtc-hidden">
+        {{{ this }}}
+      </div>
+      {{/each}}
+      <div class="dtc-entry_cover dtc-hidden"></div>
+    </div>
+  {{/components/slider}}
+</section>
