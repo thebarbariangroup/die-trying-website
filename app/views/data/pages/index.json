@@ -90,7 +90,7 @@
     "header": "We are the Die Trying Collective, a digital ecosystem that is changing our community's sustainability habits.",
     "first": [
       "We inform you of innovative, simple solutions that can benefit our planet.",
-      "Through our first project, “SUD,” our website, social, and automated bot, we feed you sustainable facts and daily updates."
+      "Through our first project, “SUD”, our website, and bot, we feed you sustainable facts and daily updates."
     ],
     "subject": "Who we are",
     "second": [
@@ -103,13 +103,11 @@
     "subject": "SUD",
     "copy": [
       [
-        "Meet SUD, the Sustainable Utensil Dispenser. Its results rely on you. Using SUD, we’ll track the plastic utensils saved as you make the move to metal. Each time it’s applied, SUD automatically counts the silverware used, equal to that of the plastic saved. With every sustainable dispense, SUD will dispense a sustainable fact.",
-        "You’ll notice a difference in your everyday habits, starting with this first step. The stats are on us, and the choice, well that’s yours."
+        "Meet SUD, the Sustainable Utensil Dispenser. Using SUD, we’ll track the plastic utensils saved as you make the move to metal. With every sustainable dispense, SUD will dispense a sustainable fact."
       ],
       [
         "We built SUD sustainably, using eco-friendly materials. Take cork, for example—a 100% natural, renewable, recycled, recyclable, and biodegradable resource. Not one tree is chopped in the process of cork harvesting.",
-        "Thanks to SUD and its build, we reduce plastic and noise pollution in the kitchen while boosting awareness in the world.",
-        "Coming soon, learn more about SUD’s impact at Barbarian and beyond."
+        "Thanks to SUD, we reduce plastic in the kitchen and boost awareness in the world."
       ]
     ]
   },
