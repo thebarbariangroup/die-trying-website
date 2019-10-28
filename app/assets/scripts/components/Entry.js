@@ -39,9 +39,8 @@ export default class Entry {
       const els = this.facts.slice(acc, end);
 
       const tween = TweenLite.set(els, { className: `-=${ className }` }, 0);
-      
       timeline.add(tween, `+=${ (divisions - idx) }`);
-      debugger;
+
       return end;
     }, 0);
 

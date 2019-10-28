@@ -1,6 +1,10 @@
 html {
   background-color: $black; // better overscroll
   // overflow-x: hidden; // prevent side scroll from oversized elements
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 body {

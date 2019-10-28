@@ -1,5 +1,6 @@
 .#{$ns}-entry {
   background: $offwhite;
+  overflow: hidden;
 
   &_content {
     display: flex;

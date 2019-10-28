@@ -5,10 +5,12 @@
     margin: 0 auto;
     max-width: rem(1440);
     padding: rem(16) 0 rem(64);
+    height: 100%;
 
     @include media-min(sm) {
       display: flex;
       flex-direction: row-reverse;
+      align-items: center;
       justify-content: space-between;
     }
   }
@@ -22,16 +24,20 @@
   }
 
   &_figure {
+    width: 100%;
+
     & > svg {
       width: 100%;
     }
     
-    &--screen-1 {
+    &--fork, &--spoon, &--knife, &--screen-1, &--screen-2 {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 20%;
-      transform: translate(-86%, -10%);
+      top: 0;
+      left: 0;
+    }
+
+    &--fork, &--spoon, &--knife {
+      top: 63%;
     }
   }
 
@@ -48,7 +54,7 @@
 
       @include media-min(sm) {
         margin: 0 auto;
-        top: 0;
+        // top: 0;
         text-align: center;
       }
     }
