@@ -16,6 +16,7 @@
     font-weight: $bold;
     text-transform: uppercase;
     color: $black;
+    line-height: 1;
     
     &--initial {
       position: relative;
@@ -37,11 +38,14 @@
     }
 
     @for $i from 0 through 55 {
+      $randDim: random(100);
+      $randSize: random(112);
+
       &--#{$i} {
-        top: #{ (random(100) - 25) + '%' }; // some negative
-        left: #{ (random(100) - 25) + '%' }; // some negative
-        font-size: rem(random(240) + 10); // min 10px
-        width: #{ (random(100)/2) + 10 + '%' }; // min 10px
+        top: #{ (random(100) - 20) + '%' }; // some negative
+        left: #{ (random(100) - 20) + '%' }; // some negative
+        font-size: rem($randSize + 10); // min 10px
+        width: #{ ($randDim/2) + 10 + '%' }; // min 10%
       }
     }
   }

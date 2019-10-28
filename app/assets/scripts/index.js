@@ -1,3 +1,7 @@
+import TweenLite from './lib/TweenLite.min';
+import TimelineLite from './lib/TimelineLite.min';
+import CSSPlugin from './lib/plugins/CSSPlugin.min';
+
 import Entry from './components/Entry';
 import Device from './components/Device';
 import Visual from './components/Visual';

@@ -5,11 +5,11 @@
         {{ initial }}
       </div>
       {{#each facts}}
-      <div class="dtc-entry_fact dtc-entry_fact--{{ @index }} dtc-hidden">
+      <div class="dtc-entry_fact dtc-entry_fact--{{ @index }} dtc-hidden" data-entryfact>
         {{{ this }}}
       </div>
       {{/each}}
-      <div class="dtc-entry_cover dtc-hidden"></div>
+      <div class="dtc-entry_cover dtc-hidden" data-entrycover></div>
     </div>
   {{/components/slider}}
 </section>
