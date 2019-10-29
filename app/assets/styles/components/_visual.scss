@@ -45,12 +45,18 @@
     &--nyc {
       position: absolute;
       bottom: 0;
-      width: 8%;
+      height: 17%; // 0.34miles / 2miles
+      width: 100%; // size of svg constrained by height
       stroke: $blue;
+      z-index: 5;
 
-      transform: scale(4);
+      transform: scale(6);
       transform-origin: center bottom;
 
+      svg {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     &--trashpile-top {
