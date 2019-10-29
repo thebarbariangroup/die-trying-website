@@ -1,9 +1,8 @@
 .#{$ns}-visual {
-  $CLASS: &; // NOTE: LOCAL VAR
-
-  background: linear-gradient(to bottom, $black, $red);
-
+  
   &_content {
+    background: linear-gradient(to bottom, $black, $red);
+    
     margin: 0 auto;
     text-align: center;
     
@@ -32,42 +31,70 @@
   &_body {
     position: relative;
     flex: 1;
-
-    // &:hover {
-    //   #{$CLASS}_figure {
-    //     &--trashpile, &--nyc {
-    //       transform: scale(1);
-    //     }
-    //   }
-    // }
   }
 
-  .#{$ns}-traveller_content {
-    height: 100%;
-  }
-
-  // TODO: consider pulling this out into base/global
   &_figure {
     display: flex;
     justify-content: center;
+    backface-visibility: hidden;
+
+    svg {
+      vertical-align: bottom;
+    }
     
     &--nyc {
       position: absolute;
       bottom: 0;
-      width: 5%;
+      width: 8%;
+      stroke: $blue;
 
-      transform: scale(5.5);
+      transform: scale(4);
       transform-origin: center bottom;
+
     }
 
-    &--trashpile {
+    &--trashpile-top {
       position: absolute;
-      top: 0;
-      bottom: -50%;
+      bottom: -3px;
+      height: 100%;
       width: 100%;
 
-      transform: scale(0.1);
-      transform-origin: center 67%;
+      transform: scale(0.1) translateY(100%);
+      transform-origin: center bottom;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--scale {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      height: 100%;
+      width: 8%;
+      stroke: $offwhite;
+
+      svg {
+        height: 100%;
+      }
+
+      &-marker {
+        fill: $offwhite;
+        fill-rule: nonzero;
+        stroke: $offwhite;
+      }
+      
+      &-line {
+        stroke-dasharray: 8 12;
+
+        &_mask {
+          stroke: #FFFFFF;
+          stroke-dasharray: 821;
+          stroke-dashoffset: -821;
+        }
+      }
     }
   }
 }

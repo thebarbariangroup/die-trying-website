@@ -9,6 +9,7 @@
 .#{$ns}-traveller {
   width: 100%;
   height: 100vh;
+  backface-visibility: hidden;
 
   @include media-min(sm) {
     position: absolute;
