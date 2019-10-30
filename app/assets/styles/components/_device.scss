@@ -24,16 +24,25 @@
   }
 
   &_figure {
+    position: relative; // for z-indexing
     width: 100%;
 
     & > svg {
       width: 100%;
+    }
+
+    &--device {
+      z-index: 3;
     }
     
     &--fork, &--spoon, &--knife, &--screen-1, &--screen-2 {
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    &--screen-1, &--screen-2 {
+      z-index: 5;
     }
 
     &--fork, &--spoon, &--knife {
@@ -48,7 +57,7 @@
     &-header {
       position: absolute;
       margin-left: rem(-16);
-      top: rem(-48);
+      top: rem(-8);
       width: 100%;
       z-index: 1;
 
@@ -64,8 +73,26 @@
       padding: 0 $col-gutter;
       z-index: 2;
 
-      @include media-min(sm) {
-        width: 65%;
+      &--mobile {
+        display: block;
+      }
+      
+      &--desktop {
+        display: none;
+        position: relative;
+      }
+
+      @include media-min(md) {
+        margin-top: rem(128);
+
+        &--mobile {
+          display: none;
+        }
+
+        &--desktop {
+          display: block;
+          // width: 80%;
+        }
       }
     }
 
@@ -83,7 +110,9 @@
       &--1 {
         // TODO: probably remove this
         @include media-min(sm) {
-          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
       }
     }
