@@ -2,7 +2,7 @@ exports.add = function add (base, add, options) {
   let baseInt, addInt;
   try {
     baseInt = parseInt(base);
-    addint = parseInt(add);
+    addInt = parseInt(add);
   }
   catch(e) {
     console.error('Invalid parameter: must be integer-like');

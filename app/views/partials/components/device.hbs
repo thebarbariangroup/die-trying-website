@@ -2,14 +2,17 @@
   {{#> components/slider }}
     <div class="dtc-device_content">
       <div class="dtc-device_frame dtc-device_col">
-        {{!-- fork --}}
-        {{!-- knife --}}
-        <figure class="dtc-device_figure dtc-device_figure--knife" data-utensil="knife">
-          {{> global/icons/knife }}
-        </figure>
         {{!-- spoon --}}
         <figure class="dtc-device_figure dtc-device_figure--spoon" data-utensil="spoon">
           {{> global/icons/spoon }}
+        </figure>
+        {{!-- fork --}}
+        <figure class="dtc-device_figure dtc-device_figure--fork" data-utensil="fork">
+          {{> global/icons/fork }}
+        </figure>
+        {{!-- knife --}}
+        <figure class="dtc-device_figure dtc-device_figure--knife" data-utensil="knife">
+          {{> global/icons/knife }}
         </figure>
         {{!-- mask --}}
         {{!-- screen 1 --}}
@@ -32,11 +35,20 @@
           </div>
         </div>
         <div class="dtc-device_copy-body">
-          {{#each copy}}
-            <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}" data-paragraph="{{add @index 1 }}">
-              {{> components/paragraphs paragraphs=this }}
-            </div>
-          {{/each}}
+          <div class="dtc-device_copy-body--desktop">
+            {{#each copy.desktop}}
+              <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}" data-paragraph="{{add @index 1 }}">
+                {{> components/paragraphs paragraphs=this }}
+              </div>
+            {{/each}}
+          </div>
+          <div class="dtc-device_copy-body--mobile">
+            {{#each copy.mobile}}
+              <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}">
+                {{> components/paragraphs paragraphs=this }}
+              </div>
+            {{/each}}
+          </div>
         </div>
       </div>
     </div>
