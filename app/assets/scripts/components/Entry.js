@@ -14,13 +14,14 @@ export default class Entry {
 
   _initialize () {
     this._setupHandlers();
-    this.facts = [].slice.call(this.element.querySelectorAll('[data-entryfact]'))
+    this.scrollArrow = this.element.querySelector('[data-scrollarrow]');
+    this.facts = [].slice.call(this.element.querySelectorAll('[data-entryfact]'));
     this.timeline = this._createTimeline();
     
     const slider = this.element.querySelector('[data-slider]'); 
     this.slider = new Slider({
       track: slider,
-      distance: 10,
+      distance: 6,
       callback: this.animate
     });
   }
@@ -31,21 +32,30 @@ export default class Entry {
 
   _createTimeline () {
     const className = 'dtc-hidden';
-    const divisions = 10;
-    const timeline = new TimelineLite({ paused: true, onComplete: this._onTimelineComplete.bind(this) });
+    const divisions = 8;
+    const tlLength = 8;
+    const timeline = new TimelineLite({ paused: true });
+
+    const initFacts = TweenLite.to(this.facts, 0, { visibility: 'hidden', zIndex: -1 });
+
+    const scrollArrow  = TweenLite.to(this.scrollArrow, (tlLength / 2), { y: 1000 })
+    const hideAllFacts = TweenLite.set(this.element, { backgroundColor: `#1C1515` });
     
     divideAlgo(this.facts.length, divisions).reduce((acc, curr, idx) => {
       const end = (acc+curr);
       const els = this.facts.slice(acc, end);
+      
+      const tween = TweenLite.set(els, { visibility: 'visible', zIndex: 1 });
+      console.log('RELATIVE TIME:', (tlLength / divisions) * (1/(idx+1)));
+      timeline.add(tween, `+=${ (tlLength / divisions) * (1/(idx+1)) }`); // relatively add to timeline at decreasing intervals (accelerate the reveals)
 
-      const tween = TweenLite.set(els, { className: `-=${ className }` }, 0);
-      timeline.add(tween, `+=${ (divisions - idx) }`);
-
-      return end;
+      return end; // return for reduce fxn
     }, 0);
-
-    const showCover = TweenLite.to(this.cover, 10, { className: `-=${ className }` });
-    timeline.add(showCover, '+=0');
+    
+    timeline
+      .add(scrollArrow, 0)
+      .add(hideAllFacts, '+=0')
+      .set({}, {}, `+=${ tlLength / divisions }`) // add a little timeline padding at the end
 
     return timeline;
   }
@@ -54,16 +64,11 @@ export default class Entry {
     console.log('ANIMATE Entry', pct)
     this.timeline.progress(pct);
   }
-
-  _onTimelineComplete () {
-    // this.element.classList.remove('dtc-hidden'); // only play once
-    console.log('fire something');
-  }
 }
 
 function divideAlgo (num, parts) {
   const floor = Math.floor(num / parts);
-  const retVal = [...new Array(parts)].map(() => floor);
+  const retVal = [...new Array(parts)].map(() => floor); // basically == Array.fill(floor)
   
   let diff = num - (floor * parts);
   while (diff) {

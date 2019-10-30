@@ -3,13 +3,15 @@
     <div class="dtc-entry_content">
       <div class="dtc-entry_fact dtc-entry_fact--initial">
         {{ initial }}
+        <div class="dtc-entry_scroll-arrow" data-scrollarrow="">
+          {{> global/icons/scroll-arrow }}
+        </div>
       </div>
       {{#each facts}}
-      <div class="dtc-entry_fact dtc-entry_fact--{{ @index }} dtc-hidden" data-entryfact>
+      <div class="dtc-entry_fact dtc-entry_fact--{{ @index }}" data-entryfact="">
         {{{ this }}}
       </div>
       {{/each}}
-      <div class="dtc-entry_cover dtc-hidden" data-entrycover></div>
     </div>
   {{/components/slider}}
 </section>
