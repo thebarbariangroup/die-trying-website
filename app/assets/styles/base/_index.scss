@@ -38,12 +38,14 @@ body {
   }
 
   &--link {
+    margin-top: rem(128);
     font-size: rem(24);
     font-weight: $bold;
     font-style: italic;
     text-decoration: underline;
 
     @include media-min(md) {
+      margin-top: rem(192);
       font-size: rem(32);
     }
   }
@@ -69,11 +71,15 @@ body {
       left: 50%;
       width: #{$diameter + "%"};
       padding-top: #{$diameter + "%"};
-      border: 7px solid $red;
+      border: rem(10) solid $red;
       border-radius: 50%;
       background-color: $blue;
       z-index: 1;
       transform: translate(-50%, -50%);
+
+      @include media-min(md) {
+        border-width: rem(14);
+      }
     }
   }
 }

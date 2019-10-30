@@ -11,7 +11,10 @@
   &_header {
     font-size: rem(32);
     font-weight: $bold;
-    line-height: 1.3125;
+
+    @include media-min(xs) {
+      font-size: 8vw;
+    }
 
     @include media-min(md) {
       font-size: rem(106);
@@ -19,6 +22,7 @@
 
     .#{$ns}-paragraph {
       font-family: $font-primary;
+      line-height: 1.1;
     }
   }
 

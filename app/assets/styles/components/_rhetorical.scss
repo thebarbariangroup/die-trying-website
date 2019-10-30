@@ -1,19 +1,19 @@
 .#{$ns}-rhetorical {
   position: relative;
   padding-top: rem(16);
-  background: linear-gradient(to bottom, $blue, $black 40% 50%, $blue 50%);
+  background: linear-gradient(to bottom, $blue, $black);
 
   &_content {
-    margin-top: rem(-40);
+    margin-top: rem(-36);
     padding: 0 $col-gutter rem(80);
     font-weight: 700;
 
     @include media-clamp(xs, md) {
-      margin-top: -8vw;
+      margin-top: -7vw;
     }
 
     @include media-min(md) {
-      margin-top: rem(-96);
+      margin-top: rem(-80);
     }
   }
 

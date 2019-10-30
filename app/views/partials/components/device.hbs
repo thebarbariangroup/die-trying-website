@@ -4,24 +4,24 @@
       <div class="dtc-device_frame dtc-device_col">
         {{!-- fork --}}
         {{!-- knife --}}
-        <figure class="dtc-device_figure dtc-device_figure--knife">
+        <figure class="dtc-device_figure dtc-device_figure--knife" data-utensil="knife">
           {{> global/icons/knife }}
         </figure>
         {{!-- spoon --}}
-        <figure class="dtc-device_figure dtc-device_figure--spoon">
+        <figure class="dtc-device_figure dtc-device_figure--spoon" data-utensil="spoon">
           {{> global/icons/spoon }}
         </figure>
         {{!-- mask --}}
         {{!-- screen 1 --}}
-        <figure class="dtc-device_figure dtc-device_figure--screen-1">
+        <figure class="dtc-device_figure dtc-device_figure--screen-1" data-screen="1">
           {{> global/icons/device-screen_1 }}
         </figure>
         {{!-- screen 2 --}}
-        <figure class="dtc-device_figure dtc-device_figure--screen-2">
+        <figure class="dtc-device_figure dtc-device_figure--screen-2" data-screen="2">
           {{> global/icons/device-screen_2 }}
         </figure>
         {{!-- device --}}
-        <figure class="dtc-device_figure">
+        <figure class="dtc-device_figure" data-device="">
           {{> global/icons/device }}
         </figure>
       </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="dtc-device_copy-body">
           {{#each copy}}
-            <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}">
+            <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}" data-paragraph="{{add @index 1 }}">
               {{> components/paragraphs paragraphs=this }}
             </div>
           {{/each}}

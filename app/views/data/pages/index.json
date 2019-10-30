@@ -82,12 +82,13 @@
       "We’ve become wasteful.", 
       "We’ve become lazy.",
       "We’ve become unaware.",
-      "We take plastic forks because we don’t know why we&nbsp;wouldn’t.",
-      "We buy plastic water bottles because well, doesn’t everyone?"],
+      "We take plastic forks because we don’t know why we wouldn’t. We buy plastic water bottles because well,",
+      "doesn’t everyone?"
+      ],
     "response": "Wrong"
   },
   "introduction": {
-    "header": "We are the Die Trying Collective, a digital ecosystem that is changing our community's sustainability habits.",
+    "header": "We are the Die Trying Collective, a digital ecosystem that is changing our community's sustainability&nbsp;habits.",
     "first": [
       "We inform you of innovative, simple solutions that can benefit our planet.",
       "Through our first project, “SUD”, our website, and bot, we feed you sustainable facts and daily updates."
@@ -128,7 +129,8 @@
       "alt": ""
     },
     "main": [
-      "Enough is enough. It’s time to take a stand, show the difference, and make a change for our community. By displaying our in-office stats and tracking the impact, we’re making steps towards a better tomorrow—a stronger, healthier Mother. We can’t retract the damage done, but we can stop ourselves from furthering it."
+      "Enough is enough. It’s time to take a stand, show the difference, and make a change for our community.",
+      "By displaying our in-office stats and tracking the impact, we’re making steps towards a better tomorrow—a stronger, healthier Mother. We can’t retract the damage done, but we can stop ourselves from furthering it."
     ]
   },
   "footer": {

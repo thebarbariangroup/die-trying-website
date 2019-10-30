@@ -1,3 +1,4 @@
+import { black } from '../utils/variables';
 import Slider from '../utils/Slider';
 
 export default class Entry {
@@ -38,8 +39,8 @@ export default class Entry {
 
     const initFacts = TweenLite.to(this.facts, 0, { visibility: 'hidden', zIndex: -1 });
 
-    const scrollArrow  = TweenLite.to(this.scrollArrow, (tlLength / 2), { y: 1000 })
-    const hideAllFacts = TweenLite.set(this.element, { backgroundColor: `#1C1515` });
+    const scrollArrow  = TweenLite.to(this.scrollArrow, (tlLength / 4), { y: 1000 })
+    const hideAllFacts = TweenLite.set(this.element, { backgroundColor: `${ black }` });
     
     divideAlgo(this.facts.length, divisions).reduce((acc, curr, idx) => {
       const end = (acc+curr);
@@ -49,13 +50,13 @@ export default class Entry {
       console.log('RELATIVE TIME:', (tlLength / divisions) * (1/(idx+1)));
       timeline.add(tween, `+=${ (tlLength / divisions) * (1/(idx+1)) }`); // relatively add to timeline at decreasing intervals (accelerate the reveals)
 
-      return end; // return for reduce fxn
+      return end; // return acc
     }, 0);
     
     timeline
       .add(scrollArrow, 0)
       .add(hideAllFacts, '+=0')
-      .set({}, {}, `+=${ tlLength / divisions }`) // add a little timeline padding at the end
+      // .set({}, {}, `+=${ 0.5 }`) // add a little timeline padding at the end
 
     return timeline;
   }
@@ -67,13 +68,14 @@ export default class Entry {
 }
 
 function divideAlgo (num, parts) {
-  const floor = Math.floor(num / parts);
+  const floor = Math.floor(num / parts); // find biggest int that fills each index (parts)
   const retVal = [...new Array(parts)].map(() => floor); // basically == Array.fill(floor)
   
-  let diff = num - (floor * parts);
-  while (diff) {
-    retVal[(retVal.length-diff)] += 1;
-    diff--;
+  let remainder = num % (floor * parts);
+  // let diff = num - (floor * parts); // remainder
+  while (remainder) {
+    retVal[(retVal.length-remainder)] += 1;
+    remainder--;
   }
 
   for (let i = 0; i < parts; i+=2) {
