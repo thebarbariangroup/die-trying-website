@@ -17,6 +17,7 @@
 
   &_col {
     flex: 1;
+    flex-basis: $col-12-6;
   }
 
   &_frame {
@@ -26,6 +27,9 @@
   &_figure {
     position: relative; // for z-indexing
     width: 100%;
+    
+    display: flex;
+    justify-content: center;
 
     & > svg {
       width: 100%;
@@ -46,7 +50,11 @@
     }
 
     &--fork, &--spoon, &--knife {
-      top: 63%;
+      top: 60%;
+      
+      & > svg { 
+        width: 16%; 
+      }
     }
   }
 
@@ -63,7 +71,6 @@
 
       @include media-min(sm) {
         margin: 0 auto;
-        // top: 0;
         text-align: center;
       }
     }
@@ -91,7 +98,8 @@
 
         &--desktop {
           display: block;
-          // width: 80%;
+          margin-left: auto;
+          width: $col-12-10;
         }
       }
     }

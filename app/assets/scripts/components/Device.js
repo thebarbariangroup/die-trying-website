@@ -128,7 +128,7 @@ export default class Device {
       return () => {
         const _timeline = new TimelineLite();
 
-        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-10%', y: '120%' });
+        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-12%', y: '130%' });
         const fade = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.2, { alpha: 1 },  { alpha: 0 });
 
         _timeline
