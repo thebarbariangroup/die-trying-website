@@ -32,6 +32,7 @@ export default class Slider extends BaseClass {
     this.track = track;
     this.traveller = traveller || track.querySelector('[data-traveller]');
     this.distance = distance;
+    this._disabled = false;
     this._callback = callback;
     
     this[BOUNDS] = null;
@@ -49,19 +50,23 @@ export default class Slider extends BaseClass {
 
   _initialize () {
     this._setup();
-    this._setDimensions();
+    this._setDimensions(this.distance);
+    this._setBounds();
 
     requestAnimationFrame(() => {
-      this._setBounds();
       this._checkStatus()
     });
   }
 
   _setup () {
+    const _onResize = this._getBounds.bind(this, true); // force new calc
+    
     this._setDimensions = this._setDimensions.bind(this);
     this._setBounds = this._setBounds.bind(this);
+    this._getBounds = this._getBounds.bind(this);
     this._checkStatus = this._checkStatus.bind(this);
-    const _onResize = this._getBounds.bind(this, true); // force new calc
+    this.enable = this.enable.bind(this);
+    this.disable = this.disable.bind(this);
     
     this.progress = this.progress.bind(this);
 
@@ -69,9 +74,13 @@ export default class Slider extends BaseClass {
     this.resizeId = this.resizeHelper.add(_onResize);
   }
 
-  _setDimensions () {
-    this.track.style.height = `${ this.distance * 100 }vh`;
-    // requestAnimationFrame(() => (this._getBounds(true)));
+  _setDimensions (height) {
+    const newHeight = Number.isNaN(parseInt(height)) 
+        ? height
+        : `${ parseInt(height) * 100 }vh`;
+    
+    console.log('NEW HEIGHT', newHeight);
+    this.track.style.height = newHeight;
   }
 
   _setBounds () {
@@ -97,6 +106,7 @@ export default class Slider extends BaseClass {
   }
 
   _checkStatus () {
+    if (this._disabled) return;
     const { scrollY } = this.scrollHelper;
     const { start, end, trackLen, height } = this._getBounds();
     
@@ -133,6 +143,21 @@ export default class Slider extends BaseClass {
     }
 
     return this.traveller.setAttribute('style', styles);
+  }
+
+  enable () {
+    console.log('ENABLE', this)
+    this._disabled = false;
+    this._setDimensions(this.distance);
+    this._checkStatus();
+  }
+
+  disable () {
+    console.log('DISABLE', this);
+    this._disabled = true;
+    this._setDimensions('auto');
+    this.progress(0);
+    this.traveller.setAttribute('style', 'position: relative; height: auto');
   }
 
   progress (percentage) {

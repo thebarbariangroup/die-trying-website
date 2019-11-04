@@ -1,9 +1,11 @@
+import Module from './Module';
 import Slider from '../utils/Slider';
+import { breakpoints } from '../utils/variables';
 
-export default class Device {
-
+export default class Device extends Module {
   constructor (element) {
-    this.element = element;
+    super(element);
+    // this.element = element;
     this.timeline = null;
     this.deviceEl = null;
     this.screenEls = null;
@@ -35,11 +37,17 @@ export default class Device {
       distance: 10,
       callback: this.animate
     });
+
+    this.onMediaQuery(`(min-width: ${ breakpoints.md }px)`, this.slider.enable.bind(this.slider));
+    this.onMediaQuery(`(max-width: ${ breakpoints.md-1 }px)`, this.slider.disable.bind(this.slider));
+    
+    this._checkMqs(); // check initial state
   }
 
   _setupHandlers () {
+    super._setupHandlers();
     this.animate = this.animate.bind(this);
-    this._onResize = this._onResize.bind(this);
+    // this._onResize = this._onResize.bind(this);
   }
 
   _createTimeline (length) {
@@ -128,7 +136,7 @@ export default class Device {
       return () => {
         const _timeline = new TimelineLite();
 
-        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-12%', y: '130%' });
+        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-9%', y: '140%' });
         const fade = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.2, { alpha: 1 },  { alpha: 0 });
 
         _timeline
@@ -137,7 +145,7 @@ export default class Device {
 
         return _timeline;
       }
-    })
+    });
 
     utensilTimelines.forEach((tl, idx) => {
       timeline.add(tl());
@@ -148,11 +156,6 @@ export default class Device {
 
     console.log('UTENSILS', timeline.duration());
     return timeline;
-  }
-
-  _onResize () {
-    // check if above desktop size and initialize
-    // check if below desktop size and destroy
   }
 
   animate (pct) {

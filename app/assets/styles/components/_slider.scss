@@ -1,9 +1,5 @@
 .#{$ns}-track {
   position: relative;
-
-  @include media-min(sm) {
-    padding-bottom: 100vh;
-  }
 }
 
 .#{$ns}-traveller {
@@ -15,7 +11,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    // height: 100vh;
   }
 
   &_content {

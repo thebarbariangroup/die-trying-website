@@ -7,7 +7,7 @@
     padding: rem(16) 0 rem(64);
     height: 100%;
 
-    @include media-min(sm) {
+    @include media-min(md) {
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
@@ -64,19 +64,22 @@
 
     &-header {
       position: absolute;
-      margin-left: rem(-16);
-      top: rem(-8);
+      top: rem(-64);
       width: 100%;
       z-index: 1;
-
-      @include media-min(sm) {
+      
+      @include media-min(md) {
         margin: 0 auto;
+        top: rem(-8);
         text-align: center;
+
+        transform: translateX(-50%);
       }
     }
 
     &-body {
       margin: auto;
+      width: $col-12-8;
       padding: 0 $col-gutter;
       z-index: 2;
 
@@ -98,8 +101,7 @@
 
         &--desktop {
           display: block;
-          margin-left: auto;
-          width: $col-12-10;
+          margin: 0 auto;
         }
       }
     }
@@ -109,7 +111,7 @@
       line-height: 1.3125;
       text-align: justify;
 
-      @include media-min(sm) {
+      @include media-min(md) {
         font-size: rem(24);
       }
 
@@ -117,7 +119,7 @@
 
       &--1 {
         // TODO: probably remove this
-        @include media-min(sm) {
+        @include media-min(md) {
           position: absolute;
           top: 0;
           left: 0;
@@ -128,10 +130,14 @@
 
   &_subject {
     @include outline-text($blue, 2);
+    text-align: center;
     font-size: rem(205);
 
-    @include media-min(sm) {
+    @include media-min(md) {
+      margin-left: -50%;
       font-size: rem(320);
+      
+      transform: translateX(50%);
     }
   }
 }
