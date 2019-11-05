@@ -16,8 +16,10 @@
   }
 
   &_col {
+    // margin: auto;
     flex: 1;
     flex-basis: $col-12-6;
+    // height: 100%;
   }
 
   &_frame {
@@ -32,6 +34,7 @@
     justify-content: center;
 
     & > svg {
+      height: 100%;
       width: 100%;
     }
 

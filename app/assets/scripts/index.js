@@ -7,9 +7,9 @@ import Device from './components/Device';
 import Visual from './components/Visual';
 
 const start = () => {
-  const entry = new Entry(document.querySelector('.dtc-entry'));
-  const device = new Device(document.querySelector('[data-module="device"'));
-  const visual = new Visual(document.querySelector('.dtc-visual'));
+  const entry = new Entry(document.querySelector('[data-module="entry"]'));
+  const device = new Device(document.querySelector('[data-module="device"]'));
+  const visual = new Visual(document.querySelector('[data-module="visual"]'));
 }
 
 start();

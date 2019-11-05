@@ -74,7 +74,10 @@
         "eyebrow": "Powered By"
       }
     },
-    "title": "Die Trying Collective",
+    "title": {
+      "fallback": "Die Trying Collective",
+      "color": "#FFFBF2"
+    },
     "subtitle": "Turning sustainability setbacks into real-time solutions"
   },
   "rhetorical": {
@@ -110,7 +113,7 @@
         ],
         [
           "We built SUD sustainably, using eco-friendly materials. Take cork, for example—a 100% natural, renewable, recycled, recyclable, and biodegradable resource. Not one tree is chopped in the process of cork harvesting.",
-          "Thanks to SUD and its build, we reduce plastic and noise pollution in the kitchen while boosting awareness in the world.",
+          "SUD’s design was strategic, preventing sound, waste, and plastic pollution—it's a quieter, more sustainable space as metal meets cork.",
           "Coming soon, learn more about SUD’s impact at Barbarian and beyond."
         ]
       ],

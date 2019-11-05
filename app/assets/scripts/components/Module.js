@@ -16,7 +16,6 @@ export default class Module extends BaseClass {
     this.onMediaQuery = this.onMediaQuery.bind(this);
     this._checkMqs = this._checkMqs.bind(this);
     this.resizeHelper.add(this._checkMqs);
-    // console.log('MODULE setupHandlers done')
   }
 
   _createMediaQuery (bp, cb) {
@@ -42,6 +41,5 @@ export default class Module extends BaseClass {
     this._mqs.forEach(({mq, callback}) => {
       if (mq.matches) callback();
     });
-    console.log('checking MQs done', this, this._mqs);
   }
 };

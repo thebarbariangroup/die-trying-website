@@ -22,6 +22,7 @@ export default class Slider extends BaseClass {
   }
 
   constructor ({
+    // PROPS
     track,
     traveller,
     distance = 2,
@@ -79,7 +80,6 @@ export default class Slider extends BaseClass {
         ? height
         : `${ parseInt(height) * 100 }vh`;
     
-    console.log('NEW HEIGHT', newHeight);
     this.track.style.height = newHeight;
   }
 
@@ -146,14 +146,12 @@ export default class Slider extends BaseClass {
   }
 
   enable () {
-    console.log('ENABLE', this)
     this._disabled = false;
     this._setDimensions(this.distance);
     this._checkStatus();
   }
 
   disable () {
-    console.log('DISABLE', this);
     this._disabled = true;
     this._setDimensions('auto');
     this.progress(0);

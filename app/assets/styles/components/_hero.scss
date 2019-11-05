@@ -45,6 +45,13 @@
 
   .#{$ns}-title {
     font-size: rem(48);
+    
+    & > svg {
+      width: 100%;
+      fill: $offwhite;
+      font-family: $font-primary;
+      font-size: rem(185);
+    }
 
     @include media-clamp(sm, md) {
       font-size: 15vw;

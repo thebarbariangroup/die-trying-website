@@ -8,7 +8,7 @@ export default class Visual {
     this.cityEl = null;
     this.trashpileEl = null;
     this.scaleEl = null;
-    // this.scaleMaskEl = null;
+
     this.headlineEl = null;
 
     this._initialize();
@@ -21,7 +21,6 @@ export default class Visual {
     this.cityEl = this.element.querySelector('[data-visual="nyc"]');
     this.trashpileEl = this.element.querySelector('[data-visual="trashpile"]');
     this.scaleEl = this.element.querySelector('[data-visual="scale"');
-    // this.scaleMask = this.scaleEl.querySelector('[data-visual="yAxisMask"]');
 
     this.timeline = this._createTimeline();
 
@@ -94,7 +93,6 @@ export default class Visual {
     [].slice.call(scaleMarkers).forEach((marker, idx) => {
       const twn = TweenLite.to(marker, fadeLength, { alpha: 1 });
       const position = marker.getAttribute('data-visual'); // attr should be "marker#"
-      console.log(position);
       timeline.add(twn, `${ position }`);
     });
 
@@ -102,7 +100,6 @@ export default class Visual {
   }
 
   animate (pct) {
-    console.log('ANIMATE Visual', pct)
     this.timeline.progress(pct);
   }
 }

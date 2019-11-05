@@ -38,10 +38,19 @@
     font-size: rem(48);
     font-weight: $bold;
     line-height: 1.1;
-    text-transform: uppercase;
 
+    & > svg {
+      fill: $offwhite;
+      font-family: $font-primary;
+      font-size: rem(120);
+    }
+    
     @include media-min(sm) {
       font-size: rem(128);
+    }
+    
+    @include media-min(md) {
+      text-transform: uppercase;
     }
   }
 }

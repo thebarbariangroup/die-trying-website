@@ -8,7 +8,7 @@
     max-width: rem(640);
 
     @include media-min(md) {
-      transform-origin: center;
+      transform-origin: 60% 55%;
       transform: rotate(-20deg);
       width: 90%;
       max-width: rem(1440);

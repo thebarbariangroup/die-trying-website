@@ -136,7 +136,7 @@ export default class Device extends Module {
       return () => {
         const _timeline = new TimelineLite();
 
-        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-9%', y: '140%' });
+        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-10%', y: '150%' });
         const fade = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.2, { alpha: 1 },  { alpha: 0 });
 
         _timeline
@@ -154,12 +154,10 @@ export default class Device extends Module {
       timeline.add(tl());
     });
 
-    console.log('UTENSILS', timeline.duration());
     return timeline;
   }
 
   animate (pct) {
-    console.log('ANIMATE Device', pct)
     this.timeline.progress(pct);
   }
 }

@@ -1,6 +1,5 @@
 .#{$ns}-statistic {
   background: linear-gradient(to bottom, $red, $green);
-  
 
   &_content {
     margin: 0 auto;
@@ -12,6 +11,7 @@
 
     @include media-min(md) {
       padding-bottom: rem(96);
+      text-align: left;
       
       display: flex;
       flex-direction: row;
@@ -19,14 +19,30 @@
   }
   
   &_header {
-    flex: 1;
+    flex-basis: $col-12-4;
+    
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
+    &_content {
+      margin: 0 auto;
+      flex-basis: $col-12-9;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      display: flex;
+
+      @include media-min(sm) {
+        margin-left: auto;
+      }
+    }
   }
   
   &_body {
-    flex: 3
+    flex-basis: $col-12-8;
+
+    @include media-min(md) {
+      margin-top: rem(-96);
+    }
   }
   
   &_stat {
@@ -34,9 +50,8 @@
     flex-direction: column;
     
     @include media-min(md) {
-      margin-top: rem(-128);
       flex-direction: row;
-      align-items: baseline;
+      align-items: flex-end;
       justify-content: center;
     }
   }
@@ -48,25 +63,22 @@
     letter-spacing: -16px;
 
     @include media-min(md) {
-      font-size: rem(620);
+      font-size: 35vw;
       line-height: 0.8;
+    }
+
+    @include media-min(xl) {
+      font-size: rem(620);
     }
   }
   
   .#{$ns}-title {
-    text-transform: uppercase;
     line-height: 1.2;
     font-family: $font-secondary;
-
-    @include media-min(md) {
-      margin-top: rem(96);
-    }
-  }
-
-  .#{$ns}-subtitle {
     
     @include media-min(md) {
-      margin-bottom: rem(32);
+      margin-top: rem(96);
+      text-transform: uppercase;
     }
   }
 }

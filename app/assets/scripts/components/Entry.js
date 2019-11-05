@@ -1,4 +1,5 @@
-import { black } from '../utils/variables';
+import { colors } from '../utils/variables';
+import Module from './Module';
 import Slider from '../utils/Slider';
 
 export default class Entry {
@@ -40,14 +41,13 @@ export default class Entry {
     const initFacts = TweenLite.to(this.facts, 0, { visibility: 'hidden', zIndex: -1 });
 
     const scrollArrow  = TweenLite.to(this.scrollArrow, (tlLength / 4), { y: 1000 })
-    const hideAllFacts = TweenLite.set(this.element, { backgroundColor: `${ black }` });
+    const hideAllFacts = TweenLite.set(this.element, { backgroundColor: `${ colors.black }` });
     
-    divideAlgo(this.facts.length, divisions).reduce((acc, curr, idx) => {
+    partitionElementsIntoGroups(this.facts.length, divisions).reduce((acc, curr, idx) => {
       const end = (acc+curr);
       const els = this.facts.slice(acc, end);
       
       const tween = TweenLite.set(els, { visibility: 'visible', zIndex: 1 });
-      console.log('RELATIVE TIME:', (tlLength / divisions) * (1/(idx+1)));
       timeline.add(tween, `+=${ (tlLength / divisions) * (1/(idx+1)) }`); // relatively add to timeline at decreasing intervals (accelerate the reveals)
 
       return end; // return acc
@@ -62,17 +62,16 @@ export default class Entry {
   }
 
   animate (pct) {
-    console.log('ANIMATE Entry', pct)
     this.timeline.progress(pct);
   }
 }
 
-function divideAlgo (num, parts) {
-  const floor = Math.floor(num / parts); // find biggest int that fills each index (parts)
-  const retVal = [...new Array(parts)].map(() => floor); // basically == Array.fill(floor)
+function partitionElementsIntoGroups (num, parts) {
+  const base = Math.floor(num / parts); // find biggest int whose sum is < total 
+  const retVal = [...new Array(parts)].map(() => base); // fills each index (parts) with int basically == Array.fill(base)
   
-  let remainder = num % (floor * parts);
-  // let diff = num - (floor * parts); // remainder
+  let remainder = num % (base * parts);
+  // let diff = num - (base * parts); // remainder
   while (remainder) {
     retVal[(retVal.length-remainder)] += 1;
     remainder--;

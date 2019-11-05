@@ -12,7 +12,7 @@
   }
   
   &_header {
-    margin: rem(64) auto rem(32);
+    margin: auto;
     padding: 0 $col-gutter;
   }
 
@@ -31,6 +31,11 @@
   &_body {
     position: relative;
     flex: 1;
+    max-height: 70vh;
+
+    @include media-min(sm) {
+      max-height: 80vmin; // prevent trashpile from getting too distorted across screen sizes
+    }
   }
 
   &_figure {
@@ -61,12 +66,20 @@
 
     &--trashpile-top {
       position: absolute;
-      bottom: -3px;
+      bottom: -8px;
       height: 100%;
-      width: 100%;
+      width: 200%;
 
       transform: scale(0.1) translateY(100%);
       transform-origin: center bottom;
+
+      @include media-min(sm) {
+        width: 150%;
+      }
+
+      @include media-min(xl) {
+        width: 100%;
+      }
 
       svg {
         height: 100%;
