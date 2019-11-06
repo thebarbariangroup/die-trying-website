@@ -38,14 +38,14 @@
           <div class="dtc-device_copy-body--desktop">
             {{#each copy.desktop}}
               <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}" data-block="{{add @index 1 }}">
-                {{> components/paragraphs paragraphs=this }}
+                {{> global/paragraphs paragraphs=this }}
               </div>
             {{/each}}
           </div>
           <div class="dtc-device_copy-body--mobile">
             {{#each copy.mobile}}
               <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}">
-                {{> components/paragraphs paragraphs=this }}
+                {{> global/paragraphs paragraphs=this }}
               </div>
             {{/each}}
           </div>
