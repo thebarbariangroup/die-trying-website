@@ -14,7 +14,7 @@
       text-align: left;
       
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
     }
   }
   
@@ -25,7 +25,7 @@
     
     &_content {
       margin: 0 auto;
-      flex-basis: $col-12-9;
+      flex-basis: $col-12-10;
       flex-direction: column;
       justify-content: space-between;
       
@@ -38,7 +38,6 @@
   }
   
   &_body {
-    flex-basis: $col-12-8;
 
     @include media-min(md) {
       margin-top: rem(-96);
@@ -50,9 +49,26 @@
     flex-direction: column;
     
     @include media-min(md) {
+      margin: 0 auto;
+      flex-basis: $col-12-10;
       flex-direction: row;
-      align-items: flex-end;
-      justify-content: center;
+      width: $col-12-10;
+      // align-items: baseline;
+      justify-content: flex-start;
+
+      & > * {
+        
+      }
+    }
+  }
+
+  &_numerator, &_denominator {
+
+    @include media-min(md) {
+      margin: auto auto 10%;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      z-index: 5;
     }
   }
 
@@ -63,8 +79,15 @@
     letter-spacing: -16px;
 
     @include media-min(md) {
+      flex-basis: $col-12-4; 
       font-size: 35vw;
       line-height: 0.8;
+
+      &-content {
+        display: block;
+        width: 0;
+        margin-left: -50%;
+      }
     }
 
     @include media-min(xl) {

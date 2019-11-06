@@ -130,8 +130,7 @@
     }
   },
   "statistic": {
-    "title": "Today's Stat",
-    "subtitle": "Damn right we saved"
+    "title": "Today's Stat"
   },
   "reason": {
     "subject": "Why we're doing it",
