@@ -1,12 +1,12 @@
 .#{$ns}-introduction {
   padding: rem(48) 0;
   background: linear-gradient(to bottom, $green, $blue);
+  overflow: visible;
 
   &_content {
     margin: 0 auto;
     padding: $col-gutter;
     max-width: rem(640);
-    overflow: hidden;
 
     @include media-min(md) {
       transform-origin: 60% 55%;

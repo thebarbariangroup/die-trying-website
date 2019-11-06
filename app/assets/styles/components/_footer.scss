@@ -30,6 +30,16 @@
     margin: rem(54) auto;
   }
 
+  &_recipient {
+    .#{$ns}-paragraph {
+      margin: 0 auto;
+      font-family: $font-primary;
+      font-weight: $bold;
+      font-style: italic;
+      color: $green;
+    } 
+  }
+
   .#{$ns}-ctas {
     display: flex;
     flex-direction: column;

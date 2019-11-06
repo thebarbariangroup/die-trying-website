@@ -1,5 +1,10 @@
-html {
+html, body {
   background: linear-gradient(to bottom, $offwhite 0% 50%, $black 50%); // better overscroll
+}
+
+html {
+  // background: linear-gradient(to bottom, $offwhite 0% 50%, $black 50%); // better overscroll
+  overflow-x: hidden;
 
   * {
     box-sizing: border-box;
@@ -17,7 +22,6 @@ body {
 }
 
 .#{$ns}-cta {
-  margin-top: rem(80);
   color: $offwhite;
   text-decoration: none;
   
@@ -27,7 +31,7 @@ body {
   }
 
   @include media-min(md) {
-    margin-top: rem(128);
+    margin: rem(64) auto;
   }
 
   &_text {
@@ -36,26 +40,27 @@ body {
   }
 
   &--link {
-    margin-top: rem(128);
+    margin-top: rem(48);
     font-size: rem(24);
     font-weight: $bold;
     font-style: italic;
     text-decoration: underline;
 
     @include media-min(md) {
-      margin-top: rem(192);
       font-size: rem(32);
     }
   }
 
   &--donate {
     position: relative;
+    margin: rem(80) auto;
     padding: rem(16);
     font-size: rem(48);
     font-weight: $bold;
     text-transform: uppercase;
 
     @include media-min(md) {
+      margin: rem(128) auto;
       font-size: rem(120);
     }
     

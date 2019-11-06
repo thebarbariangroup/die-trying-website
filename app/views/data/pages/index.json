@@ -155,8 +155,13 @@
     "ctas": {
       "donate": {
         "text": "Donate",
-        "link": "#"
+        "link": "//act.oceana.org/page/37133/donate/1?ea.tracking.id=footer"
       },
+      "recipient": [
+        "This month, we’re raising awareness and funds for Oceana.",
+        "We need your help. Let’s do this or die trying.",
+        "Stay tuned for next month’s beneficiary."
+      ],
       "follow": {
         "text": "Follow us",
         "link": "#"

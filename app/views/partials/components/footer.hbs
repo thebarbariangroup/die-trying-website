@@ -9,6 +9,9 @@
       {{#with ctas}}
       <div class="dtc-ctas">
         {{> global/ctas/donate donate }}
+        <div class="dtc-footer_recipient">
+          {{> components/paragraphs paragraphs=recipient }}
+        </div>
         {{> global/ctas/link follow }}
       </div>
       {{/with}}
