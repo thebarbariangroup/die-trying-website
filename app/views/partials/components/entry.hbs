@@ -1,11 +1,11 @@
 <section class="dtc-entry" data-module="entry">
   {{#> components/slider }}
     <div class="dtc-entry_content">
+      <div class="dtc-entry_scroll-arrow" data-scrollarrow="">
+        {{> global/icons/scroll-arrow }}
+      </div>
       <div class="dtc-entry_fact dtc-entry_fact--initial">
         {{ initial }}
-        <div class="dtc-entry_scroll-arrow" data-scrollarrow="">
-          {{> global/icons/scroll-arrow }}
-        </div>
       </div>
       {{#each facts}}
       <div class="dtc-entry_fact dtc-entry_fact--{{ @index }}" data-entryfact="">

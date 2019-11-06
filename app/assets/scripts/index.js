@@ -7,9 +7,13 @@ import Device from './components/Device';
 import Visual from './components/Visual';
 
 const start = () => {
-  const entry = new Entry(document.querySelector('[data-module="entry"]'));
-  const device = new Device(document.querySelector('[data-module="device"]'));
-  const visual = new Visual(document.querySelector('[data-module="visual"]'));
+  const entryEl = document.querySelector('[data-module="entry"]');
+  const deviceEl = document.querySelector('[data-module="device"]');
+  const visualEl = document.querySelector('[data-module="visual"]');
+
+  const entry = entryEl ? new Entry(entryEl) : null;
+  const device = entryEl ? new Device(deviceEl) : null;
+  const visual = entryEl ? new Visual(visualEl) : null;
 }
 
 start();

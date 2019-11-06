@@ -6,6 +6,7 @@
     margin: 0 auto;
     padding: $col-gutter;
     max-width: rem(640);
+    overflow: hidden;
 
     @include media-min(md) {
       transform-origin: 60% 55%;

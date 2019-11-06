@@ -16,10 +16,8 @@
   }
 
   &_col {
-    // margin: auto;
     flex: 1;
     flex-basis: $col-12-6;
-    // height: 100%;
   }
 
   &_frame {
@@ -71,18 +69,18 @@
       width: 100%;
       z-index: 1;
       
+      transform: translateX(-50%);
+      
       @include media-min(md) {
         margin: 0 auto;
         top: rem(-8);
         text-align: center;
 
-        transform: translateX(-50%);
       }
     }
 
     &-body {
       margin: auto;
-      width: $col-12-8;
       padding: 0 $col-gutter;
       z-index: 2;
 
@@ -93,6 +91,7 @@
       &--desktop {
         display: none;
         position: relative;
+        width: $col-12-8;
       }
 
       @include media-min(md) {
@@ -136,11 +135,11 @@
     text-align: center;
     font-size: rem(205);
 
+    margin-left: -50%;
+    transform: translateX(50%);
+    
     @include media-min(md) {
-      margin-left: -50%;
-      font-size: rem(320);
-      
-      transform: translateX(50%);
+      font-size: rem(320);  
     }
   }
 }

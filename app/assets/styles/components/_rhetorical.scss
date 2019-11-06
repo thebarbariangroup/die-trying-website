@@ -7,6 +7,7 @@
     margin-top: rem(-36);
     padding: 0 $col-gutter rem(80);
     font-weight: 700;
+    overflow-x: hidden;
 
     @include media-clamp(xs, md) {
       margin-top: -7vw;

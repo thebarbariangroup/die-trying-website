@@ -8,14 +8,12 @@ export default class Slider extends BaseClass {
     position = 'absolute',
     top = 0,
     left = 0,
-    bottom = 0,
-    height = 'inherit',
-    width = 'inherit'
+    bottom = 0
   }) {
     const newStatus = `
-      position: ${ position };
-      top: ${ top };
-      left: ${ left };
+      position: ${ position }; 
+      top: ${ top }; 
+      left: ${ left }; 
       bottom: ${ bottom };
     `;
     return newStatus;
@@ -96,7 +94,6 @@ export default class Slider extends BaseClass {
       height,
       end: scrollY + (trackTop + trackLen)
     }
-    
     this.bounds = bounds;
   }
 
@@ -115,10 +112,12 @@ export default class Slider extends BaseClass {
     // Should slide
     if (scrollY >= start && (scrollY + height) < end) {
       styles = this.constructor.createStatus({
-        position: 'fixed'
+        position: 'fixed',
+        bottom: 'auto'
       });
       
       const pct = (scrollY - start) / (trackLen - height);
+    
       this.progress(pct);
     }
 

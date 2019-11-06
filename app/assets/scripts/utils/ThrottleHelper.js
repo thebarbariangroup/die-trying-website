@@ -1,4 +1,4 @@
-import getScrollY from './getScrollY';
+import getScrollY from './helpers/getScrollY';
 const ID = Symbol('id');
 
 export default class ThrottleHelper {

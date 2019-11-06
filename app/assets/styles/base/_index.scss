@@ -1,6 +1,5 @@
 html {
-  background-color: $black; // better overscroll
-  // overflow-x: hidden; // prevent side scroll from oversized elements
+  background: linear-gradient(to bottom, $offwhite 0% 50%, $black 50%); // better overscroll
 
   * {
     box-sizing: border-box;
@@ -8,7 +7,6 @@ html {
 }
 
 body {
-  overflow-x: hidden; // prevent side scroll from oversized elements
   color: $offwhite;
 }
 
