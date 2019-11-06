@@ -1,7 +1,13 @@
 .#{$ns}-conclusion {
   background: linear-gradient(to bottom, $black, $red 50%, $black 50%);
+  
+  &_header {
+    margin-top: -3px;
+    width: 100%;
+    padding-bottom: rem(32);
 
-  &_content {
-    padding: 25% $col-gutter rem(16);
+    & svg {
+      width: 100%;
+    }
   }
 }
