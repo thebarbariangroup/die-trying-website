@@ -1,0 +1,119 @@
+.#{$ns}-visual {
+  
+  &_content {
+    background: linear-gradient(to bottom, $black, $red);
+    
+    margin: 0 auto;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  &_header {
+    margin: auto;
+    padding: 0 $col-gutter;
+  }
+
+  &_headline {
+    font-family: $font-primary;
+    font-weight: $bold;
+    font-style: italic;
+    
+    @include media-min(sm) {
+      margin: 0 auto;
+      max-width: rem(576);
+      font-size: rem(32);
+    }
+  }
+
+  &_body {
+    position: relative;
+    flex: 1;
+    max-height: 70vh;
+
+    @include media-min(sm) {
+      max-height: 80vmin; // prevent trashpile from getting too distorted across screen sizes
+    }
+  }
+
+  &_figure {
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+
+    svg {
+      vertical-align: bottom;
+    }
+    
+    &--nyc {
+      position: absolute;
+      bottom: 0;
+      height: 17%; // 0.34miles / 2miles
+      width: 100%; // size of svg constrained by height
+      stroke: $blue;
+      z-index: 5;
+
+      transform: scale(6);
+      transform-origin: center bottom;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--trashpile-top {
+      position: absolute;
+      bottom: -8px;
+      height: 100%;
+      width: 200%;
+
+      transform: scale(0.1) translateY(100%);
+      transform-origin: center bottom;
+
+      @include media-min(sm) {
+        width: 150%;
+      }
+
+      @include media-min(xl) {
+        width: 100%;
+      }
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--scale {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      height: 100%;
+      width: 8%;
+      stroke: $offwhite;
+
+      svg {
+        height: 100%;
+      }
+
+      &-marker {
+        fill: $offwhite;
+        fill-rule: nonzero;
+        stroke: $offwhite;
+      }
+      
+      &-line {
+        stroke-dasharray: 8 12;
+
+        &_mask {
+          stroke: #FFFFFF;
+          stroke-dasharray: 821;
+          stroke-dashoffset: -821;
+        }
+      }
+    }
+  }
+}

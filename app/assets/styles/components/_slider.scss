@@ -1,0 +1,21 @@
+.#{$ns}-track {
+  position: relative;
+}
+
+.#{$ns}-traveller {
+  width: 100%;
+  height: 100vh;
+  backface-visibility: hidden;
+
+  @include media-min(sm) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &_content {
+    height: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+}

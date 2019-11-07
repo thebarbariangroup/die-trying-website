@@ -1,0 +1,27 @@
+<section class="dtc-hero">
+  {{#with header}}
+  <div class="dtc-hero_header">
+    <figure class="dtc-figure">
+      {{> global/icons/dtc-logo logo }}
+    </figure>
+    {{#with appanage}}
+    <div class="dtc-appanage">
+      <div class="dtc-eyebrow">
+        {{ eyebrow }}
+      </div>
+      <figure class="dtc-figure">
+        {{> global/icons/barbarian-logo figure }}
+      </figure>
+    </div>
+    {{/with}}
+  </div>
+  {{/with}}
+  <div class="dtc-hero_content">
+    <div class="dtc-title">
+      {{> global/icons/dtc-title title }}
+    </div>
+    <div class="dtc-subtitle">
+      {{ subtitle }}
+    </div>
+  </div>
+</section>

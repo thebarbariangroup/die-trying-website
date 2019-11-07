@@ -1,0 +1,98 @@
+.#{$ns}-introduction {
+  padding: rem(48) 0;
+  background: linear-gradient(to bottom, $green, $blue);
+  overflow: visible;
+
+  &_content {
+    margin: 0 auto;
+    padding: $col-gutter;
+    max-width: rem(640);
+
+    @include media-min(md) {
+      transform-origin: 60% 55%;
+      transform: rotate(-20deg);
+      width: 90%;
+      max-width: rem(1440);
+    }
+  }
+
+  &_header {
+    text-align: center;
+    line-height: 1.25;
+    font-size: rem(24);
+    font-style: italic;
+    font-weight: $bold;
+
+    @include media-min(md) {
+      font-size: rem(80);
+    }
+  }
+
+  &_body {
+    margin: rem(96) auto;
+    max-width: rem(480);
+
+    @include media-min(md) {
+      display: flex;
+      margin-right: 8%;
+      width: 75%;
+      max-width: rem(1440 * 0.667);
+      flex-flow: row nowrap;
+      align-items: baseline;
+      justify-content: space-around;
+      padding-bottom: rem(64);
+    }
+  }
+  
+  &_col {
+    flex: 2;
+    padding: 0 rem(32);
+    text-align: justify;
+    transform-origin: center;
+
+    @include media-min(md) {
+      
+    }
+  }
+
+  &_subject {
+    position: relative;
+    flex: 1;
+    margin: rem(42) auto;
+    text-align: center;
+    
+    @include outline-text($red);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &_content {
+      font-size: rem(64);
+
+      @include media-min(md) {
+        position: absolute;
+        font-size: rem(100);
+        white-space: nowrap;
+
+        transform: rotate(90deg) translateX(50%);
+      }
+    }
+  }
+
+  .#{$ns}-col {
+    &--tilt {
+      @include media-max(md) {
+        transform: rotate(-10deg);
+      }
+    }
+  }
+
+  .#{$ns}-paragraph {
+    margin-bottom: rem(16);
+    width: 100%;
+    font-size: rem(20);
+    line-height: 1.5;
+    font-family: $font-secondary
+  }
+}

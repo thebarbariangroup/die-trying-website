@@ -1,0 +1,25 @@
+$ns: 'dtc'; // NAMESPACE PREFIX
+
+$black: #1C1515;
+$offwhite: #FFFBF2;
+$blue: #366FFF;
+$green: #329499;
+$red: #FF6F61;
+
+$font-fallback: 'Sans-Serif';
+$font-primary: 'Times New Roman', #{$font-fallback};
+$font-secondary: 'Arial', #{$font-fallback};
+
+$thin: 200;
+$regular: 400;
+$bold: 700;
+
+$basePx: 16;
+
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px
+);

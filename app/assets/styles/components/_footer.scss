@@ -1,0 +1,49 @@
+.#{$ns}-footer {
+  background: $black;
+
+  &_content {
+    margin: 0 auto;
+    max-width: rem(1440);
+    padding: rem(16) $col-gutter;
+    text-align: center;
+  }
+
+  &_header {
+    font-size: rem(32);
+    font-weight: $bold;
+
+    @include media-min(xs) {
+      font-size: 8vw;
+    }
+
+    @include media-min(md) {
+      font-size: rem(106);
+    }
+
+    .#{$ns}-paragraph {
+      font-family: $font-primary;
+      line-height: 1.1;
+    }
+  }
+
+  &_body {
+    margin: rem(54) auto;
+  }
+
+  &_recipient {
+    .#{$ns}-paragraph {
+      margin: 0 auto;
+      font-family: $font-primary;
+      font-weight: $bold;
+      font-style: italic;
+      color: $green;
+    } 
+  }
+
+  .#{$ns}-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

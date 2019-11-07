@@ -1,0 +1,145 @@
+.#{$ns}-device {
+  background: $green;
+
+  &_content {
+    margin: 0 auto;
+    max-width: rem(1440);
+    padding: rem(16) 0 rem(64);
+    height: 100%;
+
+    @include media-min(md) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &_col {
+    flex: 1;
+    flex-basis: $col-12-6;
+  }
+
+  &_frame {
+    position: relative;
+  }
+
+  &_figure {
+    position: relative; // for z-indexing
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+
+    & > svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    &--device {
+      z-index: 3;
+    }
+    
+    &--fork, &--spoon, &--knife, &--screen-1, &--screen-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &--screen-1, &--screen-2 {
+      z-index: 5;
+    }
+
+    &--fork, &--spoon, &--knife {
+      top: 60%;
+      
+      & > svg { 
+        width: 16%; 
+      }
+    }
+  }
+
+  &_copy {
+    position: relative;
+    display: flex;
+
+    &-header {
+      position: absolute;
+      top: rem(-64);
+      width: 100%;
+      z-index: 1;
+      
+      transform: translateX(-50%);
+      
+      @include media-min(md) {
+        margin: 0 auto;
+        top: rem(-8);
+        text-align: center;
+
+      }
+    }
+
+    &-body {
+      margin: auto;
+      padding: 0 $col-gutter;
+      z-index: 2;
+
+      &--mobile {
+        display: block;
+      }
+      
+      &--desktop {
+        display: none;
+        position: relative;
+        width: $col-12-8;
+      }
+
+      @include media-min(md) {
+        margin-top: rem(128);
+
+        &--mobile {
+          display: none;
+        }
+
+        &--desktop {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &-block {
+      font-size: rem(16);
+      line-height: 1.3125;
+      text-align: justify;
+
+      @include media-min(md) {
+        font-size: rem(24);
+      }
+
+      &--0 {}
+
+      &--1 {
+        // TODO: probably remove this
+        @include media-min(md) {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &_subject {
+    @include outline-text($blue, 2);
+    text-align: center;
+    font-size: rem(205);
+
+    margin-left: -50%;
+    transform: translateX(50%);
+    
+    @include media-min(md) {
+      font-size: rem(320);  
+    }
+  }
+}
