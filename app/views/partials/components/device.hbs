@@ -1,0 +1,56 @@
+<section class="dtc-device" data-module="device">
+  {{#> components/slider }}
+    <div class="dtc-device_content">
+      <div class="dtc-device_frame dtc-device_col">
+        {{!-- spoon --}}
+        <figure class="dtc-device_figure dtc-device_figure--spoon" data-utensil="spoon">
+          {{> global/icons/spoon }}
+        </figure>
+        {{!-- fork --}}
+        <figure class="dtc-device_figure dtc-device_figure--fork" data-utensil="fork">
+          {{> global/icons/fork }}
+        </figure>
+        {{!-- knife --}}
+        <figure class="dtc-device_figure dtc-device_figure--knife" data-utensil="knife">
+          {{> global/icons/knife }}
+        </figure>
+        {{!-- mask --}}
+        {{!-- screen 1 --}}
+        <figure class="dtc-device_figure dtc-device_figure--screen-1" data-screen="1">
+          {{> global/icons/device-screen_1 }}
+        </figure>
+        {{!-- screen 2 --}}
+        <figure class="dtc-device_figure dtc-device_figure--screen-2" data-screen="2">
+          {{> global/icons/device-screen_2 }}
+        </figure>
+        {{!-- device --}}
+        <figure class="dtc-device_figure dtc-device_figure--device" data-device="">
+          {{> global/icons/device }}
+        </figure>
+      </div>
+      <div class="dtc-device_copy dtc-device_col">
+        <div class="dtc-device_copy-header">
+          <div class="dtc-device_subject">
+            {{ subject }}
+          </div>
+        </div>
+        <div class="dtc-device_copy-body">
+          <div class="dtc-device_copy-body--desktop">
+            {{#each copy.desktop}}
+              <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}" data-block="{{add @index 1 }}">
+                {{> global/paragraphs paragraphs=this }}
+              </div>
+            {{/each}}
+          </div>
+          <div class="dtc-device_copy-body--mobile">
+            {{#each copy.mobile}}
+              <div class="dtc-device_copy-block dtc-device_copy-block--{{ @index }}">
+                {{> global/paragraphs paragraphs=this }}
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/components/slider}}
+</section>

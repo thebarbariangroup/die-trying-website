@@ -1,6 +1,6 @@
 const gulp       = require('gulp');
 const config     = require('../config').config;
-const babelify   = require("babelify");
+const babelify   = require('babelify');
 const bro        = require('gulp-bro');
 
 gulp.task('scripts', () => {

@@ -1,0 +1,57 @@
+.#{$ns}-entry {
+  $CLASS: &;
+
+  background: $offwhite;
+  overflow: hidden;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 $col-gutter;
+
+    #{$CLASS}_scroll-arrow {
+      position: absolute;
+      left: 50%;
+      bottom: 20%;
+      width: rem(16);
+
+      transform: translate(-50%, 0);
+
+      & > svg {
+        fill: none;
+        stroke-width: 1;
+      }
+    }
+  }
+
+  
+  &_fact {
+    position: absolute;
+    text-align: center;
+    font-family: $font-primary;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $black;
+    line-height: 1;
+    
+    &--initial {
+      position: relative;
+      margin: auto;
+      max-width: rem(640);
+      font-size: rem(24);
+    }
+
+    @for $i from 0 through 55 {
+      $randDim: random(100);
+      $randSize: random(112) * (random($i + 1)/5); // increase likelihood of earlier i's being smaller #'s
+
+      &--#{$i} {
+        top: #{ (random(100) - 15) + '%' }; // some will be negative
+        left: #{ (random(100) - 20) + '%' }; // some will be negative
+        font-size: rem(($randSize) + 10); // min 10px
+        width: #{ ($randDim/2) + 20 + '%' }; // min 20%
+      }
+    }
+  }
+}

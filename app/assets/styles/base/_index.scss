@@ -1,0 +1,93 @@
+html, body {
+  background: linear-gradient(to bottom, $offwhite 0% 50%, $black 50%); // better overscroll
+}
+
+html {
+  // background: linear-gradient(to bottom, $offwhite 0% 50%, $black 50%); // better overscroll
+  overflow-x: hidden;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  color: $offwhite;
+}
+
+.#{$ns}-paragraph {
+  margin: 1em auto; // relative to the size of the (local) font
+  font-family: $font-secondary;
+  line-height: 1.4;
+}
+
+.#{$ns}-cta {
+  color: $offwhite;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @include media-min(md) {
+    margin: rem(64) auto;
+  }
+
+  &_text {
+    position: relative;
+    z-index: 10;
+  }
+
+  &--link {
+    margin-top: rem(48);
+    font-size: rem(24);
+    font-weight: $bold;
+    font-style: italic;
+    text-decoration: underline;
+
+    @include media-min(md) {
+      font-size: rem(32);
+    }
+  }
+
+  &--donate {
+    position: relative;
+    margin: rem(80) auto;
+    padding: rem(16);
+    font-size: rem(48);
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    @include media-min(md) {
+      margin: rem(128) auto;
+      font-size: rem(120);
+    }
+    
+    &::after {
+      $diameter: 60; // **LOCAL VAR
+      
+      content: '';
+      position: absolute;
+      margin-right: -50%;
+      top: 50%;
+      left: 50%;
+      width: #{$diameter + "%"};
+      padding-top: #{$diameter + "%"};
+      border: rem(10) solid $red;
+      border-radius: 50%;
+      background-color: $blue;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+
+      @include media-min(md) {
+        border-width: rem(14);
+      }
+    }
+  }
+}
+
+.#{$ns}-hidden {
+  visibility: hidden;
+  z-index: -1;
+}
