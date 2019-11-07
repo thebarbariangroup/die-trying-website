@@ -1,3 +1,5 @@
+import favicon from './utils/favicon';
+
 import TweenLite from './lib/TweenLite.min';
 import TimelineLite from './lib/TimelineLite.min';
 import CSSPlugin from './lib/plugins/CSSPlugin.min';
@@ -7,6 +9,8 @@ import Device from './components/Device';
 import Visual from './components/Visual';
 
 const start = () => {
+  favicon();
+
   const entryEl = document.querySelector('[data-module="entry"]');
   const deviceEl = document.querySelector('[data-module="device"]');
   const visualEl = document.querySelector('[data-module="visual"]');
