@@ -15,17 +15,17 @@
 
   &_subject {
     position: absolute;
-    top: rem(48);
+    top: rem(32);
     left: rem(16);
     @include outline-text($blue);
-    font-size: rem(28);
+    font-size: rem(32);
     line-height: 1;
 
-    transform: rotate(-10deg);
+    transform: rotate(-15deg);
     transform-origin: center;
 
     @include media-min(sm) {
-      top: rem(80);
+      top: rem(48);
       left: rem(32);
       font-size: rem(80);
     }
@@ -34,12 +34,15 @@
   &_reason {
     margin: 0 auto;
     max-width: rem(1440);
+    padding: rem(16) 0;
     text-align: center;
     font-size: rem(48);
     font-weight: $bold;
     line-height: 1.1;
 
     & > svg {
+      height: auto;
+      width: 100%;
       fill: $offwhite;
       font-family: $font-primary;
       font-size: rem(120);
