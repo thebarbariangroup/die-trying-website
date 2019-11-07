@@ -31,12 +31,22 @@
   }
 
   &_recipient {
+    margin: 0 auto;
+    padding: 0 $col-gutter;
+    text-align: center;
+    width: 85%;
+    max-width: rem(800);
+
     .#{$ns}-paragraph {
       margin: 0 auto;
       font-family: $font-primary;
       font-weight: $bold;
       font-style: italic;
       color: $green;
+      
+      @include media-min(md) {
+        font-size: rem(24);
+      }
     } 
   }
 

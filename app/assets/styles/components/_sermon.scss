@@ -2,6 +2,7 @@
   position: relative; // necessary for proper z-indexing
   margin: 0 auto;
   max-width: rem(1440);
+  padding: 0 $col-gutter;
   text-align: center;
   z-index: 2;
 
