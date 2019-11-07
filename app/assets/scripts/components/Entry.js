@@ -38,7 +38,7 @@ export default class Entry {
   _createTimeline () {
     const className = 'dtc-hidden';
     const divisions = 12;
-    const tlLength = 6;
+    const tlLength = 8;
     const scrollArrowLen = (tlLength / 5);
     const timeline = new TimelineLite({ paused: true });
 

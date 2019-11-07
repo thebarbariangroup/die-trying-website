@@ -1,7 +1,11 @@
 .#{$ns}-introduction {
   padding: rem(48) 0;
-  background: linear-gradient(to bottom, $green, $blue);
+  background: linear-gradient(to bottom, $blue 0% 20%, $green 20%, $blue);
   overflow: visible;
+  
+  @include media-min(md) {
+    background: linear-gradient(to bottom, $green, $blue);
+  }
 
   &_content {
     margin: 0 auto;

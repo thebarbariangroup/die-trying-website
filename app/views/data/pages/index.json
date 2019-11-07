@@ -156,14 +156,17 @@
         "text": "Donate",
         "link": "//act.oceana.org/page/37133/donate/1?ea.tracking.id=footer"
       },
-      "recipient": [
-        "This month, we’re raising awareness and funds for Oceana.",
-        "We need your help. Let’s do this or die trying.",
-        "Stay tuned for next month’s beneficiary."
-      ],
+      "recipient": {
+        "lead": "This month, we’re raising awareness and funds for",
+        "organization": {
+          "name": "Oceana",
+          "link": "//oceana.org/",
+          "description": ",an organization dedicated to the protection and restoration of the world’s oceans."
+        }
+      },
       "follow": {
         "text": "Follow us",
-        "link": "#"
+        "link": "//www.instagram.com/wearebarbarian/?igshid=f7nskti4vx8"
       }
     }
   }
