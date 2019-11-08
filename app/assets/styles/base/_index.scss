@@ -1,5 +1,6 @@
 html, body {
   background: linear-gradient(to bottom, $offwhite 0% 50%, $black 50%); // better overscroll
+  background-color: $black; // can't do gradient on these elems?
 }
 
 html {
