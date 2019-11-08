@@ -52,6 +52,7 @@
 
     &--fork, &--spoon, &--knife {
       top: 60%;
+      left: 2%;
       
       & > svg { 
         width: 16%; 
@@ -73,7 +74,7 @@
       
       @include media-min(md) {
         margin: 0 auto;
-        top: rem(-8);
+        top: 0;
         text-align: center;
 
       }
@@ -117,29 +118,22 @@
         font-size: rem(24);
       }
 
-      &--0 {}
-
       &--1 {
-        // TODO: probably remove this
         @include media-min(md) {
           position: absolute;
           top: 0;
-          left: 0;
         }
       }
     }
   }
 
   &_subject {
-    @include outline-text($blue, 2);
-    text-align: center;
-    font-size: rem(205);
-
     margin-left: -50%;
     transform: translateX(50%);
-    
-    @include media-min(md) {
-      font-size: rem(320);  
+
+    & > svg {
+      width: 100%;
+      fill: $blue;
     }
   }
 }

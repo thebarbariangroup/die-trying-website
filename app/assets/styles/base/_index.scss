@@ -19,9 +19,6 @@ body {
 a {
   color: inherit;
 
-  &:hover {
-    text-decoration: none;
-  }
   &:visited {
     color: inherit;
   }
@@ -35,10 +32,8 @@ a {
 
 .#{$ns}-cta {
   color: $offwhite;
-  text-decoration: none;
   
   &:hover {
-    text-decoration: none;
     cursor: pointer;
   }
 
@@ -53,10 +48,10 @@ a {
 
   &--link {
     margin-top: rem(48);
-    font-size: rem(24);
-    font-weight: $bold;
-    font-style: italic;
-    text-decoration: underline;
+
+    & svg {
+      fill: $offwhite;
+    }
 
     @include media-min(md) {
       font-size: rem(32);
@@ -70,6 +65,7 @@ a {
     font-size: rem(48);
     font-weight: $bold;
     text-transform: uppercase;
+    text-decoration: none;
 
     @include media-min(md) {
       margin: rem(128) auto;

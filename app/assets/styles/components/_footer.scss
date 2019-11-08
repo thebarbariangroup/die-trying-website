@@ -37,6 +37,10 @@
     width: 85%;
     max-width: rem(800);
 
+    @include media-min(sm) {
+      width: 70%;
+    }
+
     .#{$ns}-paragraph {
       margin: 0 auto;
       font-family: $font-primary;

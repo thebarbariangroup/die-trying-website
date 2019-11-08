@@ -108,8 +108,8 @@
     "copy": {
       "desktop": [
         [
-          "Meet SUD, the Sustainable Utensil Dispenser. Its results rely on you. Using SUD, we’ll track the plastic utensils saved as you make the move to metal. Each time it’s applied, SUD automatically counts the silverware used, equal to that of the plastic saved. With every sustainable dispense, SUD will dispense a sustainable fact.",
-          "You’ll notice a difference in your everyday habits, starting with this first step. The stats are on us, and the choice, well that’s yours." 
+          "Meet SUD, the Sustainable Utensil Dispenser. Its results rely on you. Using SUD, we’ll track the plastic utensils saved as you make the move to metal. Each time it’s applied, SUD automatically counts the silverware used, equal to that of the plastic saved. With every sustainable dispense, SUD will dispense a sustainable&nbsp;fact.",
+          "You’ll notice a difference in your everyday habits, starting with this first step. The stats are on us, and the choice, well that’s&nbsp;yours." 
         ],
         [
           "We built SUD sustainably, using eco-friendly materials. Take cork, for example—a 100% natural, renewable, recycled, recyclable, and biodegradable resource. Not one tree is chopped in the process of cork harvesting.",
@@ -165,7 +165,6 @@
         }
       },
       "follow": {
-        "text": "Follow us",
         "link": "//www.instagram.com/wearebarbarian/?igshid=f7nskti4vx8"
       }
     }

@@ -107,7 +107,7 @@ export default class Device extends Module {
     const shows = [].map.call(this.screenEls, screen => {
       return TweenLite.to(screen, (tlLength * 0.11111), { alpha: 1 });
     });
-    const vamp = TweenLite.set({}, {});
+    // const vamp = TweenLite.set({}, {});
 
     timeline
       .addLabel('start', 0)
@@ -136,7 +136,7 @@ export default class Device extends Module {
       return () => {
         const _timeline = new TimelineLite();
 
-        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-10%', y: '150%' });
+        const slide = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.8, { x: '0%', y: '0%' }, { x: '-12%', y: '180%' });
         const fade = TweenLite.fromTo(utensil, (tlLength / utensilElsArr.length) * 0.2, { alpha: 1 },  { alpha: 0 });
 
         _timeline
