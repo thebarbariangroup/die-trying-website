@@ -1,5 +1,5 @@
 .#{$ns}-conclusion {
-  background: linear-gradient(to bottom, $black, $red 50%, $black 50%);
+  background: linear-gradient(to bottom, $black, $red calc(20% + #{rem(106 * (1.1 + 0.55))}), $black calc(20% + #{rem(106 * (1.1 + 0.55))}));
   
   &_header {
     margin-top: -3px;

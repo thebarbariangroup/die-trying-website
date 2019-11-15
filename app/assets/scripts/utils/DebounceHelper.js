@@ -1,7 +1,7 @@
-const ID        = Symbol('id');
-const WAIT      = Symbol('wait');
-const TIMEOUT   = Symbol('timeout');
-const IMMEDIATE = Symbol('immediate');
+const ID        = 'id';
+const WAIT      = 'wait';
+const TIMEOUT   = 'timeout';
+const IMMEDIATE = 'immediate';
 
 export default class DebounceHelper {
 

@@ -31,7 +31,7 @@
   }
 
   &_recipient {
-    margin: 0 auto;
+    margin: rem(16) auto 0;
     padding: 0 $col-gutter;
     text-align: center;
     width: 85%;

@@ -41,6 +41,7 @@
   &_figure {
     display: flex;
     justify-content: center;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     svg {
@@ -97,6 +98,11 @@
 
       svg {
         height: 100%;
+        shape-rendering:auto; 
+        text-rendering:auto; 
+        image-rendering:auto; 
+        fill-rule:evenodd; 
+        clip-rule:evenodd;
       }
 
       &-marker {
@@ -110,8 +116,8 @@
 
         &_mask {
           stroke: #FFFFFF;
-          stroke-dasharray: 821;
-          stroke-dashoffset: -821;
+          // stroke-dasharray: 821;
+          stroke-dashoffset: 0;
         }
       }
     }

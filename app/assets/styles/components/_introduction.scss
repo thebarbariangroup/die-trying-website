@@ -33,18 +33,18 @@
   }
 
   &_body {
-    margin: rem(96) auto;
+    margin: rem(96) auto 0;
     max-width: rem(480);
 
     @include media-min(md) {
       display: flex;
       margin-right: 8%;
+      margin-bottom: rem(96);
       width: 75%;
       max-width: rem(1440 * 0.667);
       flex-flow: row nowrap;
       align-items: baseline;
       justify-content: space-around;
-      padding-bottom: rem(64);
     }
   }
   
@@ -54,9 +54,6 @@
     text-align: justify;
     transform-origin: center;
 
-    @include media-min(md) {
-      
-    }
   }
 
   &_subject {
@@ -76,7 +73,7 @@
 
       @include media-min(md) {
         position: absolute;
-        font-size: rem(100);
+        font-size: rem(80);
         white-space: nowrap;
 
         transform: rotate(90deg) translateX(50%);

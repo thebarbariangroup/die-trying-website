@@ -3,11 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Die Trying Collective</title>
-  <link rel="stylesheet" href="/assets/styles/main.css">
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;,"
+  <meta property="og:title" content="Die Trying Collective" />
+  <meta property="og:description" content="A digital ecosystem that is changing our community's sustainability habits. Let’s do this or die trying." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://dietrying.co/" />
+  <meta property="og:site_name" content="Die Trying Collective" />
+  <link rel="stylesheet" href="/assets/styles/main.css" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;," />
 </head>
 <body>
+  <div id="warningIE" class="browser-warning">
+    <div class="browser-warning_content">We support the Earth, not Internet Explorer</div>
+  </div>
+  <script>
+    function isIE () {
+      return window.navigator.userAgent.match(/(MSIE|Trident)/);
+    }
+    function dontEven () {
+      const warningEl = document.querySelector('#warningIE');
+
+      document.body.setAttribute('style', 'overflow: hidden');
+      warningEl.setAttribute('style', 'display: block; z-index: 999');
+    }
+
+    if (isIE()) dontEven();
+  </script>
   <div class="page-container {{classes}}">
     {{> 'global/nav/head-nav'}}
     <main class="content-container">

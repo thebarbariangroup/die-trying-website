@@ -1,6 +1,6 @@
 import BaseClass from './BaseClass';
 
-const BOUNDS = Symbol('bounds');
+// const BOUNDS = 'bounds';
 
 export default class Slider extends BaseClass {
   
@@ -34,18 +34,18 @@ export default class Slider extends BaseClass {
     this._disabled = false;
     this._callback = callback;
     
-    this[BOUNDS] = null;
+    this.BOUNDS = null;
 
     this._initialize();
   }
 
-  get bounds () {
-    return this[BOUNDS];
-  }
+  // get bounds () {
+  //   return this[BOUNDS];
+  // }
 
-  set bounds (bounds) {
-    this[BOUNDS] = bounds;
-  }
+  // set bounds (bounds) {
+  //   this[BOUNDS] = bounds;
+  // }
 
   _initialize () {
     this._setup();
@@ -94,12 +94,12 @@ export default class Slider extends BaseClass {
       height,
       end: scrollY + (trackTop + trackLen)
     }
-    this.bounds = bounds;
+    this.BOUNDS = bounds;
   }
 
   _getBounds (force = false) {
     if (force) this._setBounds();
-    return this.bounds;
+    return this.BOUNDS;
   }
 
   _checkStatus () {

@@ -4,6 +4,7 @@ export default class Module extends BaseClass {
   
   constructor(element) {
     super();
+    if (!element || !(element instanceof HTMLElement)) throw new Error(`Must pass a DOM element to ${ this.constructor.name }`);
     this.element = element;
     this._mqs = [];
   }

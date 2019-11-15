@@ -3,6 +3,7 @@ const gulp       = require('gulp');
 const config     = require('../config').config;
 const plumber    = require('gulp-plumber');
 const sass       = require('gulp-sass');
+const prefixer   = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS   = require('gulp-clean-css');
 const path       = require('path');
@@ -20,6 +21,7 @@ gulp.task('styles', () => {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
+    // .pipe(prefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(`${config.dist}/assets/`));
 });

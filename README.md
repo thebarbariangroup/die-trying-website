@@ -13,8 +13,11 @@
 
 ### Deploy
 Hosted thru GreenGeeks - uses an FTP process
+
 **Files should be placed in the `public_html/` directory**
 
 - SFTP: chi-node15.websitehostserver.net
 - user: dietryin
 - pass: <check #sustainability channel>
+
+run `sftp dietryin@chi-node15.websitehostserver.net`

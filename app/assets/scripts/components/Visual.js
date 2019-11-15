@@ -20,7 +20,7 @@ export default class Visual {
     this.headlineEl = this.element.querySelector('[data-headline="visual"]');
     this.cityEl = this.element.querySelector('[data-visual="nyc"]');
     this.trashpileEl = this.element.querySelector('[data-visual="trashpile"]');
-    this.scaleEl = this.element.querySelector('[data-visual="scale"');
+    this.scaleEl = this.element.querySelector('[data-visual="scale"]');
 
     this.timeline = this._createTimeline();
 
@@ -28,7 +28,7 @@ export default class Visual {
     
     this.slider = new Slider({
       track: slider,
-      distance: 5,
+      distance: 6,
       callback: this.animate
     });
   }
@@ -70,16 +70,17 @@ export default class Visual {
 
   _createScaleTimeline () {
     const tlLength = 4;
-    const fadeLength = (tlLength * 0.2)
+    const fadeLength = (tlLength * 0.2);
     const timeline = new TimelineLite();
-
+    
     const scaleMaskEl = this.scaleEl.querySelector('[data-visual="yAxisMask"]');
     const scaleMarkers = this.scaleEl.querySelectorAll('[data-visual^="marker"]');
+    const scalePathLen = (scaleMaskEl.getTotalLength() || scaleMaskEl.pathLength);
 
-    const initScale = TweenLite.set(scaleMaskEl, { strokeDashoffset: -(scaleMaskEl.getTotalLength() || scaleMaskEl.pathLength) });
+    const initScale = TweenLite.set(scaleMaskEl, { strokeDasharray: (scalePathLen), strokeDashoffset: (scalePathLen) });
     const initMarkers = TweenLite.set(scaleMarkers, { alpha: 0 });
 
-    const showScale = TweenLite.to(scaleMaskEl, tlLength, { strokeDashoffset: 0 });
+    const showScale = TweenLite.to(scaleMaskEl, tlLength, { strokeDashoffset: (2 * scalePathLen) });
 
     timeline
       .addLabel('start', 0)

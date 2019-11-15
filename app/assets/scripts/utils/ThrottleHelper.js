@@ -1,5 +1,5 @@
 import getScrollY from './helpers/getScrollY';
-const ID = Symbol('id');
+const ID = 'id';
 
 export default class ThrottleHelper {
 

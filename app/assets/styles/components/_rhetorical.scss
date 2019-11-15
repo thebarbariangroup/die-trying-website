@@ -7,7 +7,7 @@
     margin-top: rem(-36);
     padding: 0 $col-gutter rem(80);
     font-weight: 700;
-    overflow-x: hidden;
+    overflow: hidden;
 
     @include media-clamp(xs, md) {
       margin-top: -7vw;
@@ -20,7 +20,8 @@
 
   &_exclamation {
     margin: -10vw -10vw rem(-48);
-    font-size: 28vw;
+    text-align: center;
+    font-size: 26vw;
     font-weight: $bold;
     text-transform: uppercase;
     color: $red;
