@@ -8,11 +8,11 @@ ENV = 'dev';
 
 gulp.task('dev', ['clean'], () => {
   console.log('Beginning build...');
-  gulp.start('publish', 'styles', 'scripts', 'images', 'watch');
+  gulp.start('serve','publish', 'styles', 'scripts', 'images', 'watch');
 });
 
 gulp.task('build', ['clean'], () => {
   ENV = 'prod';
   console.log('Beginning build...');
-  gulp.start('publish', 'styles', 'scripts', 'images');
+  gulp.start('serve','publish', 'styles', 'scripts', 'images');
 });
